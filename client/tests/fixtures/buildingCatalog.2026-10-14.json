@@ -1,0 +1,184 @@
+{
+ "capturedFrom": "GET /api/tools/building-project/catalog (isolated copy of prod server, read-only) 2026-10-14",
+ "roomTypes": [
+  {
+   "value": "bedroom",
+   "label": "Спальня",
+   "group": "living"
+  },
+  {
+   "value": "child_room",
+   "label": "Детская",
+   "group": "living"
+  },
+  {
+   "value": "living_room",
+   "label": "Гостиная",
+   "group": "living"
+  },
+  {
+   "value": "office",
+   "label": "Кабинет",
+   "group": "living"
+  },
+  {
+   "value": "guest_room",
+   "label": "Гостевая комната",
+   "group": "living"
+  },
+  {
+   "value": "dressing_room",
+   "label": "Гардеробная",
+   "group": "living"
+  },
+  {
+   "value": "kitchen",
+   "label": "Кухня",
+   "group": "common"
+  },
+  {
+   "value": "kitchen_living",
+   "label": "Кухня-гостиная",
+   "group": "common"
+  },
+  {
+   "value": "corridor",
+   "label": "Коридор",
+   "group": "common"
+  },
+  {
+   "value": "hallway",
+   "label": "Прихожая",
+   "group": "common"
+  },
+  {
+   "value": "hall",
+   "label": "Холл",
+   "group": "common"
+  },
+  {
+   "value": "stairwell",
+   "label": "Лестничная зона",
+   "group": "common"
+  },
+  {
+   "value": "bathroom",
+   "label": "Ванная",
+   "group": "wet"
+  },
+  {
+   "value": "shower",
+   "label": "Душевая",
+   "group": "wet"
+  },
+  {
+   "value": "wc",
+   "label": "Санузел",
+   "group": "wet"
+  },
+  {
+   "value": "laundry",
+   "label": "Прачечная",
+   "group": "wet"
+  },
+  {
+   "value": "balcony",
+   "label": "Балкон",
+   "group": "extra"
+  },
+  {
+   "value": "loggia",
+   "label": "Лоджия",
+   "group": "extra"
+  },
+  {
+   "value": "terrace",
+   "label": "Терраса",
+   "group": "extra"
+  },
+  {
+   "value": "basement",
+   "label": "Подвал",
+   "group": "extra"
+  },
+  {
+   "value": "garage",
+   "label": "Гараж",
+   "group": "extra"
+  },
+  {
+   "value": "storage",
+   "label": "Кладовая",
+   "group": "extra"
+  },
+  {
+   "value": "technical",
+   "label": "Техническое помещение",
+   "group": "extra"
+  },
+  {
+   "value": "boiler_room",
+   "label": "Котельная",
+   "group": "extra"
+  },
+  {
+   "value": "commercial_office",
+   "label": "Офис",
+   "group": "commercial"
+  },
+  {
+   "value": "sales_floor",
+   "label": "Торговый зал",
+   "group": "commercial"
+  },
+  {
+   "value": "warehouse",
+   "label": "Склад",
+   "group": "commercial"
+  },
+  {
+   "value": "server_room",
+   "label": "Серверная",
+   "group": "commercial"
+  },
+  {
+   "value": "restaurant",
+   "label": "Ресторан / кафе",
+   "group": "commercial"
+  },
+  {
+   "value": "workshop",
+   "label": "Производственное помещение",
+   "group": "commercial"
+  },
+  {
+   "value": "meeting_room",
+   "label": "Переговорная",
+   "group": "commercial"
+  },
+  {
+   "value": "reception",
+   "label": "Ресепшен",
+   "group": "commercial"
+  },
+  {
+   "value": "other",
+   "label": "Другое",
+   "group": "extra"
+  }
+ ],
+ "objectTypes": [
+  {
+   "value": "apartment",
+   "label": "Квартира"
+  },
+  {
+   "value": "private_house",
+   "label": "Собственный дом"
+  },
+  {
+   "value": "commercial",
+   "label": "Коммерческое помещение"
+  }
+ ]
+}

@@ -1,0 +1,385 @@
+{
+ "format": "jsonl-utf8",
+ "images": {
+  "asset_manifest_sha256": "2b3da3d62acf6ae7587c03120ee5f0ca812b671ea8be9766184c524e79243b66",
+  "copied_bytes": 480356422,
+  "copied_files": 6885,
+  "duplicate_content_extra_files": 2451,
+  "duplicate_content_groups": 815,
+  "external": [],
+  "missing": [],
+  "referenced_urls": 6885
+ },
+ "tables": {
+  "brands": {
+   "columns": [
+    "id",
+    "name",
+    "country",
+    "logo_url",
+    "description_ru",
+    "website_url",
+    "slug",
+    "is_active",
+    "created_at",
+    "updated_at",
+    "sort_order",
+    "is_popular"
+   ],
+   "file": "data/brands.jsonl",
+   "records": 45,
+   "sha256": "b6c9d640453aabf8dba6341a9fa4ca9b0f2ee9854dc01589d056343f41c7a180",
+   "withheld": []
+  },
+  "categories": {
+   "columns": [
+    "id",
+    "parent_id",
+    "name_ru",
+    "name_hy",
+    "name_en",
+    "slug",
+    "description_ru",
+    "icon",
+    "image_url",
+    "sort_order",
+    "is_active",
+    "created_at",
+    "updated_at",
+    "short_description_ru",
+    "is_public_card",
+    "menu_type",
+    "old_aliases",
+    "is_public"
+   ],
+   "file": "data/categories.jsonl",
+   "records": 130,
+   "sha256": "5cab38fac112d7a75e38c155894da8fe3b71f15bb85ac205b9410c4bf68f7ab1",
+   "withheld": []
+  },
+  "engineering_condition_entry": {
+   "columns": [
+    "condition_entry_id",
+    "condition_set_id",
+    "condition_key",
+    "value_numeric",
+    "value_text",
+    "value_boolean"
+   ],
+   "file": "data/engineering_condition_entry.jsonl",
+   "records": 76,
+   "sha256": "7e6bc627da4f1dc51c89479307a8f84207caf8e9b5843101ac23fe9cc29cb6ba",
+   "withheld": []
+  },
+  "engineering_condition_key": {
+   "columns": [
+    "condition_key",
+    "value_type",
+    "unit",
+    "description"
+   ],
+   "file": "data/engineering_condition_key.jsonl",
+   "records": 15,
+   "sha256": "062be907228331620140e00c37e2623b60274bc8b29c5ca8b4882d8335b8ae16",
+   "withheld": []
+  },
+  "engineering_condition_set": {
+   "columns": [
+    "condition_set_id",
+    "code",
+    "description",
+    "created_at"
+   ],
+   "file": "data/engineering_condition_set.jsonl",
+   "records": 15,
+   "sha256": "40c085ffda4f2d94aef84a58da506539ea4bb9fd0bbe412e4a89cb0d3175218e",
+   "withheld": []
+  },
+  "engineering_equipment_type": {
+   "columns": [
+    "equipment_type",
+    "description"
+   ],
+   "file": "data/engineering_equipment_type.jsonl",
+   "records": 13,
+   "sha256": "f82e8c4f260a7c8f2195404fa8f80f2f5b70a5eb86ab93eba1ca947aac49319f",
+   "withheld": []
+  },
+  "engineering_parameter": {
+   "columns": [
+    "parameter_id",
+    "equipment_type",
+    "code",
+    "canonical_name",
+    "value_type",
+    "canonical_unit",
+    "requirement_level",
+    "description"
+   ],
+   "file": "data/engineering_parameter.jsonl",
+   "records": 139,
+   "sha256": "cfdf2632b88ca8507a91285c2a40d083c477d2471aa124aeb408908559a5b93a",
+   "withheld": []
+  },
+  "engineering_product_profile": {
+   "columns": [
+    "product_id",
+    "equipment_type",
+    "series",
+    "model",
+    "identity_status",
+    "data_completeness",
+    "source_verification",
+    "schema_id",
+    "schema_version",
+    "created_at",
+    "updated_at"
+   ],
+   "file": "data/engineering_product_profile.jsonl",
+   "records": 123,
+   "sha256": "726dfaf171ebb2028956b85939c56a3e3705847e25b04962034222cb00e53cd0",
+   "withheld": []
+  },
+  "engineering_source": {
+   "columns": [
+    "source_id",
+    "source_type",
+    "manufacturer",
+    "document_title",
+    "document_version",
+    "url",
+    "page",
+    "table_name",
+    "retrieved_at",
+    "audited_at",
+    "notes"
+   ],
+   "file": "data/engineering_source.jsonl",
+   "records": 16,
+   "sha256": "a0e22fc9882feee5732b8b24e32d5441853795e67638ef0cd44090f9c53e599c",
+   "withheld": []
+  },
+  "engineering_source_type": {
+   "columns": [
+    "source_type",
+    "verification_tier",
+    "description"
+   ],
+   "file": "data/engineering_source_type.jsonl",
+   "records": 9,
+   "sha256": "67ba5f0bf2e9dc305a2b816656586763f0c3f2fe797ee73e2706037e79116c46",
+   "withheld": []
+  },
+  "engineering_value": {
+   "columns": [
+    "value_id",
+    "product_id",
+    "parameter_id",
+    "value_numeric",
+    "value_text",
+    "value_boolean",
+    "unit",
+    "condition_set_id",
+    "source_id",
+    "value_status",
+    "confidence",
+    "created_at",
+    "updated_at"
+   ],
+   "file": "data/engineering_value.jsonl",
+   "records": 1659,
+   "sha256": "1ae6fdc11781dcf38f0e5becefc95bbbe72418429abecec2c3808c3010a484b7",
+   "withheld": []
+  },
+  "product_attributes": {
+   "columns": [
+    "id",
+    "product_id",
+    "attribute_key",
+    "value_text",
+    "value_number",
+    "value_unit",
+    "confidence",
+    "source",
+    "evidence",
+    "extraction_version",
+    "created_at",
+    "updated_at"
+   ],
+   "file": "data/product_attributes.jsonl",
+   "records": 6375,
+   "sha256": "c3ae710eb2cc320f40eb68584ae9a46587238d42db54991c71c712317db7dcb0",
+   "withheld": []
+  },
+  "product_categories": {
+   "columns": [
+    "product_id",
+    "category_id",
+    "is_primary",
+    "created_at"
+   ],
+   "file": "data/product_categories.jsonl",
+   "records": 5323,
+   "sha256": "2aba70b66c14cd5cf574aa10ffe6d82ca45e1477035119deac9a1fa78d4b7eac",
+   "withheld": []
+  },
+  "product_documents": {
+   "columns": [
+    "id",
+    "product_id",
+    "document_name",
+    "document_type",
+    "file_url",
+    "file_extension",
+    "file_size",
+    "language",
+    "version",
+    "is_public",
+    "sort_order",
+    "created_at",
+    "is_active",
+    "deleted_at",
+    "updated_at"
+   ],
+   "file": "data/product_documents.jsonl",
+   "records": 1,
+   "sha256": "66b743b9f0e34423ea6c7f3468f273882cf72bdb538bb0cf85efbe706eebeac2",
+   "withheld": []
+  },
+  "product_features": {
+   "columns": [
+    "id",
+    "product_id",
+    "feature_name",
+    "feature_value",
+    "feature_unit",
+    "sort_order"
+   ],
+   "file": "data/product_features.jsonl",
+   "records": 39677,
+   "sha256": "5a893012a36fdb50bf4ec92e0873a271279edbb3b85fd493d821268f5f6dd0a8",
+   "withheld": []
+  },
+  "product_images": {
+   "columns": [
+    "id",
+    "product_id",
+    "image_url",
+    "alt_text",
+    "is_cover",
+    "sort_order"
+   ],
+   "file": "data/product_images.jsonl",
+   "records": 6725,
+   "sha256": "77930f9cecbc81bf4aed38094959a7c68319bb171a9b815d1683340280b7bbfe",
+   "withheld": []
+  },
+  "product_relationships": {
+   "columns": [
+    "id",
+    "source_product_id",
+    "target_product_id",
+    "relation_type",
+    "reason_engineering",
+    "confidence",
+    "rule_source",
+    "manual_review_required",
+    "review_status",
+    "conditions_json",
+    "created_by",
+    "reviewed_by",
+    "reviewed_at",
+    "created_at",
+    "updated_at"
+   ],
+   "file": "data/product_relationships.jsonl",
+   "records": 217,
+   "sha256": "b2230cd296b13cc7baf7fe22767acd42f224fa843f6b64c8a9236d7b813ae22b",
+   "withheld": []
+  },
+  "products": {
+   "columns": [
+    "id",
+    "sku",
+    "name_ru",
+    "name_hy",
+    "name_en",
+    "slug",
+    "brand_id",
+    "series_id",
+    "category_id",
+    "short_description_ru",
+    "description_ru",
+    "price_amd",
+    "currency",
+    "unit",
+    "is_active",
+    "is_featured",
+    "seo_title_ru",
+    "seo_description_ru",
+    "created_at",
+    "updated_at",
+    "old_id",
+    "primary_category_id",
+    "price_tax_included",
+    "show_price",
+    "availability_status",
+    "stock_quantity",
+    "supplier_reference",
+    "legacy_categories",
+    "cooling_power_kw",
+    "heating_power_kw",
+    "recommended_area_m2",
+    "equipment_type",
+    "suitable_for_cooling",
+    "suitable_for_heating",
+    "is_calculator_accessory",
+    "accessory_group",
+    "accessory_default_enabled",
+    "energy_source",
+    "system_type",
+    "calculator_priority",
+    "warm_floor_product_type",
+    "warm_floor_linear_power_wm",
+    "warm_floor_cable_length_m",
+    "warm_floor_mat_area_m2",
+    "warm_floor_voltage_v",
+    "warm_floor_room_types",
+    "warm_floor_floor_coverings",
+    "warm_floor_substrate_types",
+    "warm_floor_wet_zone_allowed",
+    "ai_selectable",
+    "ai_selection_notes",
+    "compatible_system_types",
+    "required_accessory",
+    "optional_accessory",
+    "brand_quality_tier",
+    "installation_complexity"
+   ],
+   "file": "data/products.jsonl",
+   "records": 5306,
+   "sha256": "ae17b89f09eceaa71a6923c2b9cff55ab188edff253b9bf9d28e2b0445245461",
+   "withheld": []
+  },
+  "series": {
+   "columns": [
+    "id",
+    "brand_id",
+    "category_id",
+    "name",
+    "slug",
+    "description_ru",
+    "image_url",
+    "is_active",
+    "created_at",
+    "updated_at",
+    "deleted_at"
+   ],
+   "file": "data/series.jsonl",
+   "records": 247,
+   "sha256": "bf9d739ba1bc082033205e65bbceb57bc72c2200471a173816d10159c6e248fc",
+   "withheld": []
+  }
+ },
+ "withheld_columns": {}
+}

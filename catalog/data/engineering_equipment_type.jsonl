@@ -1,0 +1,13 @@
+{"equipment_type":"ACCESSORY","description":"HVAC accessory / spare part"}
+{"equipment_type":"ACTUATOR","description":"Valve actuator (thermal-electric / motorised)"}
+{"equipment_type":"BALANCING_VALVE","description":"Balancing / commissioning valve (static, dynamic)"}
+{"equipment_type":"BUFFER_TANK","description":"Buffer / storage tank (incl. tank-in-tank, combi)"}
+{"equipment_type":"CIRCULATION_PUMP","description":"Circulator / circulation pump"}
+{"equipment_type":"CONTROLLER","description":"Heating-point / fan-coil controller"}
+{"equipment_type":"CONTROL_VALVE","description":"2/3/4-way control (mixing) valve"}
+{"equipment_type":"FAN_COIL","description":"Fan coil unit (2-pipe / 4-pipe)"}
+{"equipment_type":"HEAT_EXCHANGER","description":"Plate / brazed heat exchanger"}
+{"equipment_type":"HEAT_PUMP","description":"Air-to-water / monobloc / split heat pump"}
+{"equipment_type":"HYDRAULIC_SEPARATOR","description":"Hydraulic separator / low-loss header"}
+{"equipment_type":"MANIFOLD","description":"Manifold / distribution header (collector)"}
+{"equipment_type":"THERMOSTAT","description":"Room / surface thermostat"}

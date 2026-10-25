@@ -1,0 +1,2054 @@
+{
+  "language": {
+    "selectorLabel": "Select language",
+    "currentLanguage": "Current language",
+    "russian": "Russian",
+    "english": "English",
+    "armenian": "Armenian"
+  },
+  "header": {
+    "logo": {
+      "ariaLabel": "OhmX.am logo",
+      "tagline": "Engineering Equipment"
+    },
+    "navigation": {
+      "home": "Home",
+      "catalog": "Catalog",
+      "brands": "Brands",
+      "tools": "Tools",
+      "promotions": "Promotions",
+      "documentation": "Documentation",
+      "contacts": "Contacts",
+      "categories": "Categories"
+    },
+    "search": {
+      "placeholder": "Search by SKU, brand, name, or document",
+      "inputLabel": "Search the catalog",
+      "submit": "Search",
+      "open": "Open search",
+      "productFallback": "Product",
+      "genericSuggestion": "Search",
+      "suggestionTypes": {
+        "product": "Product",
+        "category": "Category",
+        "brand": "Brand",
+        "document": "Document"
+      }
+    },
+    "actions": {
+      "contact": "Contact us",
+      "cart": "Cart",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "close": "Close"
+    },
+    "catalog": {
+      "loading": "Loading categories",
+      "open": "Open catalog",
+      "categories": "Catalog categories"
+    },
+    "account": {
+      "profile": "Profile",
+      "title": "Account",
+      "titleWithName": "Account · {{name}}",
+      "profileAndMemory": "Profile and AI memory",
+      "register": "Register"
+    },
+    "theme": {
+      "switchToLight": "Light theme",
+      "switchToDark": "Dark theme"
+    },
+    "contactCards": {
+      "phone": {
+        "title": "Phone",
+        "hint": "for orders and product selection"
+      },
+      "messaging": {
+        "hint": "send an SKU, photo, or request"
+      },
+      "address": {
+        "title": "Address",
+        "value": "Yerevan, showroom / warehouse",
+        "hint": "pickup and consultations by arrangement"
+      }
+    }
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty.",
+    "remove": "Remove",
+    "fields": {
+      "name": "Name",
+      "phone": "Phone",
+      "emailOptional": "Email (optional)",
+      "pickupWarehouse": "Pickup warehouse",
+      "comment": "Comment"
+    },
+    "fulfillment": {
+      "pickup": "Pickup",
+      "delivery": "Delivery"
+    },
+    "availabilityNotice": "A manager will confirm availability and lead time.",
+    "total": "Total: {{amount}} AMD",
+    "submit": "Place order",
+    "order": {
+      "success": "Order placed",
+      "number": "Order number: {{number}}",
+      "copy": "Copy order number"
+    }
+  },
+  "navigation": {
+    "breadcrumbs": {
+      "ariaLabel": "Breadcrumbs",
+      "home": "Home",
+      "catalog": "Catalog",
+      "brands": "Brands",
+      "tools": "Tools",
+      "documentation": "Documentation",
+      "contacts": "Contacts",
+      "compare": "Compare",
+      "account": "Account",
+      "promotions": "Promotions",
+      "register": "Register",
+      "powerCalculator": "Power calculator",
+      "warmFloorCalculator": "Underfloor heating calculator"
+    },
+    "bottom": {
+      "ariaLabel": "Primary navigation",
+      "home": "Home",
+      "catalog": "Catalog",
+      "tools": "Tools",
+      "cart": "Cart",
+      "profile": "Profile"
+    },
+    "scrollTop": {
+      "ariaLabel": "Scroll the site to the top",
+      "title": "Back to top"
+    }
+  },
+  "search": {
+    "shared": {
+      "placeholder": "Search by SKU, brand, or name",
+      "catalogPlaceholder": "Search by SKU, brand, name, or document",
+      "inputLabel": "Search the catalog",
+      "submit": "Search",
+      "suggestionsLabel": "Search suggestions",
+      "productFallback": "Product",
+      "genericSuggestion": "Search",
+      "suggestionTypes": {
+        "product": "Product",
+        "category": "Category",
+        "brand": "Brand",
+        "document": "Document"
+      }
+    },
+    "viewMode": {
+      "ariaLabel": "Product view mode",
+      "grid": "Grid",
+      "list": "List"
+    },
+    "page": {
+      "caption": "Search",
+      "title": "Search by SKU, brand, name, and documents",
+      "description": "Search by SKU, name, brand, series and category. Word forms, Russian brand spellings, “16А”/“16A”, typos and wrong keyboard layout are understood.",
+      "placeholder": "For example: 088H3122, Danfoss, APC Back-UPS, DEVI manual",
+      "examples": {
+        "label": "Examples:",
+        "danfossValve": "Danfoss valve"
+      },
+      "saleMode": {
+        "ariaLabel": "Sales scenario",
+        "any": "Any sales scenario",
+        "buyNow": "Available to buy online",
+        "priceRequest": "Price on request",
+        "preorder": "Pre-order",
+        "priceEtaRequest": "Request price and lead time"
+      },
+      "startPrompt": "Start with an SKU, part number, brand, product name, or document.",
+      "loading": "Searching products and documents…",
+      "error": "Search failed. Change the query or try again later.",
+      "summary": "Products found: {{products}} · Documents: {{documents}} · Page {{page}} of {{totalPages}}",
+      "resultsTitle": "Search results",
+      "shownSummary": "Showing {{shown}} of {{total}}",
+      "pagination": {
+        "previous": "Previous",
+        "status": "Page {{page}} of {{totalPages}}",
+        "next": "Next"
+      },
+      "documentsTitle": "Documents",
+      "brandFallback": "No brand",
+      "openProduct": "Open product",
+      "empty": "Nothing found. Send us the part number or a photo, and we will help you find a match.",
+      "correctedQuery": "Showing results for “{{query}}” — keyboard layout corrected.",
+      "relaxed": "No exact matches — showing products that match most of your query.",
+      "emptyCatalog": "Open catalog",
+      "emptyRequest": "Ask a manager"
+    }
+  },
+  "catalog": {
+    "category": {
+      "actions": {
+        "back": "Back",
+        "compare": "Compare",
+        "filters": "Filters"
+      },
+      "cards": {
+        "brandConnected": "Brand linked to this category",
+        "brandProducts": "{{count}} products in this branch",
+        "collapseFullText": "Collapse full text",
+        "series": "Series",
+        "showFullText": "Show full text"
+      },
+      "counts": {
+        "found": "Found: {{count}}"
+      },
+      "descriptionFallback": "OhmX.am professional engineering catalog",
+      "descriptionForCategory": "{{title}}: OhmX.am catalog category",
+      "errors": {
+        "loadFallback": "Could not load the category.",
+        "retry": "Try again",
+        "title": "Could not open the category"
+      },
+      "fallbackTitle": "Catalog",
+      "filters": {
+        "allBrands": "All brands",
+        "allOption": "{{label}}: all",
+        "allSubcategories": "All subcategories in this branch",
+        "brandAria": "Filter by brand",
+        "categoryAria": "Filter by subcategory",
+        "documents": {
+          "any": "Documents: any",
+          "withDocuments": "With documents only"
+        },
+        "documentsAria": "Document availability",
+        "panelAria": "Catalog filters",
+        "priceFrom": "Minimum price",
+        "priceTo": "Maximum price",
+        "reset": "Reset filters",
+        "saleMode": {
+          "any": "Any sales scenario",
+          "buyNow": "Available to buy online",
+          "preorder": "Pre-order",
+          "priceEtaRequest": "Request price and lead time",
+          "priceRequest": "Price on request"
+        },
+        "saleModeAria": "Sales scenario",
+        "stock": {
+          "any": "Any availability status",
+          "inStock": "In stock only"
+        },
+        "stockAria": "Availability status",
+        "tech": {
+          "breakingCapacity": "Breaking capacity",
+          "color": "Color",
+          "curve": "Trip curve",
+          "deviceType": "Device type",
+          "doorType": "Door type",
+          "ipRating": "IP rating",
+          "leakageCurrent": "Residual current",
+          "manufacturer": "Manufacturer",
+          "material": "Material",
+          "moduleCount": "Number of modules",
+          "mountingType": "Mounting type",
+          "poles": "Number of poles",
+          "ratedCurrent": "Rated current",
+          "rowsCount": "Number of rows",
+          "series": "Series",
+          "productType": "Product type"
+        },
+        "values": {
+          "deviceType": {
+            "mcb": "Circuit breaker",
+            "rcbo": "RCBO",
+            "rcd": "RCD",
+            "switchDisconnector": "Switch-disconnector"
+          },
+          "doorType": {
+            "metal": "Metal door",
+            "opaque": "Opaque door",
+            "smoked": "Smoked door",
+            "transparent": "Transparent door",
+            "white": "White door",
+            "withoutDoor": "Without door"
+          },
+          "material": {
+            "abs": "ABS plastic",
+            "glass": "Glass",
+            "metal": "Metal",
+            "plastic": "Plastic",
+            "polycarbonate": "Polycarbonate",
+            "pvc": "PVC",
+            "steel": "Steel"
+          },
+          "mountingType": {
+            "floor": "Floor-mounted",
+            "flush": "Flush-mounted",
+            "recessed": "Recessed",
+            "surface": "Surface-mounted",
+            "wall": "Wall-mounted"
+          },
+          "productType": {
+            "equipment": "Equipment",
+            "accessory": "Accessories"
+          }
+        }
+      },
+      "imageAria": "Category image: {{title}}",
+      "pagination": {
+        "next": "Next",
+        "previous": "Previous",
+        "summary": "Page {{page}} of {{totalPages}}; products: {{total}}"
+      },
+      "related": {
+        "description": "Quick access to frames and related products from the same model.",
+        "products": "{{count}} products in this series",
+        "title": "Also compatible with this series"
+      },
+      "sections": {
+        "brands": "Brands",
+        "products": "Products",
+        "series": "Series",
+        "subcategories": "Subcategories"
+      },
+      "states": {
+        "loading": "Loading…",
+        "noResults": "No products were found for the current combination of brand, series, and filters.",
+        "productsLoading": "Loading products…",
+        "productsRefreshing": "Refreshing the product list…"
+      }
+    },
+    "root": {
+      "actions": {
+        "openCatalog": "Open catalog",
+        "selectAnalogs": "Find alternatives",
+        "sendSpecification": "Send a specification",
+        "whatsapp": "Contact us on WhatsApp"
+      },
+      "benefits": {
+        "analogs": "Alternatives by brand and SKU",
+        "b2b": "Services for businesses",
+        "caption": "Why it is convenient",
+        "delivery": "Delivery across Armenia",
+        "documents": "Documents and certificates",
+        "preorder": "Made-to-order supply",
+        "specification": "Selection by specification"
+      },
+      "directions": {
+        "all": "All directions",
+        "caption": "Main directions",
+        "description": "Unified canonical navigation. If you know the SKU, brand, or model, use the search above.",
+        "empty": "Catalog sections are not available yet.",
+        "error": "Could not load catalog navigation.",
+        "fullTreeLink": "Full tree below",
+        "loading": "Loading navigation…",
+        "openSection": "Open section",
+        "pinned": "Pinned directions",
+        "retry": "Try again",
+        "title": "Popular catalog sections"
+      },
+      "examples": {
+        "abbBreaker": "ABB circuit breaker",
+        "cable": "3x2.5 cable",
+        "danfossValve": "Danfoss valve",
+        "label": "Examples:",
+        "legrandSocket": "Legrand socket"
+      },
+      "hero": {
+        "caption": "OhmX.am Catalog",
+        "description": "Find a product in the catalog, send a specification, or get a quick selection of alternatives. We can help with brands, documents, availability, and made-to-order supply across Armenia.",
+        "title": "We will select engineering equipment by SKU, brand, alternative, or specification"
+      },
+      "search": {
+        "ariaLabel": "Search the catalog",
+        "placeholder": "Search by SKU, brand, name, or document",
+        "submit": "Search"
+      },
+      "tree": {
+        "caption": "Full tree",
+        "collapseAll": "Collapse all",
+        "collapseSection": "Collapse section",
+        "collapseSubcategory": "Collapse subcategory",
+        "description": "The complete catalog structure from the unified navigation contract. Expand a section or use search.",
+        "expandAll": "Expand all",
+        "expandSection": "Expand section",
+        "expandSubcategory": "Expand subcategory",
+        "title": "All categories and subcategories"
+      }
+    },
+    "shared": {
+      "all": "All",
+      "counts": {
+        "directions": "{{count}} directions",
+        "directions_one": "{{count}} direction",
+        "directions_other": "{{count}} directions",
+        "products": "{{count}} products",
+        "products_one": "{{count}} product",
+        "products_other": "{{count}} products",
+        "subcategories": "{{count}} subcategories",
+        "subcategories_one": "{{count}} subcategory",
+        "subcategories_other": "{{count}} subcategories"
+      },
+      "pin": {
+        "pin": "Pin",
+        "pinBrand": "Pin brand",
+        "pinCategory": "Pin category",
+        "pinSeries": "Pin series",
+        "pinSubcategory": "Pin subcategory",
+        "reorderAria": "Change pinned item order",
+        "reorderTitle": "Change order",
+        "reorderMoved": "Position {{position}} of {{total}}",
+        "unpin": "Unpin",
+        "unpinBrand": "Unpin brand",
+        "unpinCategory": "Unpin category",
+        "unpinSeries": "Unpin series",
+        "unpinSubcategory": "Unpin subcategory",
+        "pinProduct": "Pin product",
+        "unpinProduct": "Unpin product"
+      },
+      "pinned": "Pinned"
+    },
+    "filters": {
+      "allBrands": "All",
+      "brandFilter": "Brand filter"
+    },
+    "productCard": {
+      "documentsCount": "Documents: {{count}}",
+      "subtitleFallback": "Technical catalog product"
+    },
+    "publicCard": {
+      "directionsCount": "{{count}} directions",
+      "openSection": "View section",
+      "productsCount": "{{count}} products"
+    },
+    "compositions": {
+      "hvacControllers": "Controllers and modules for heating substations.",
+      "hvacSensors": "Temperature and pressure control for building services.",
+      "hvacThermostats": "Thermostats and panels for heating and fan coils.",
+      "hvacActuators": "Linear, rotary and thermoelectric actuators.",
+      "automationRelaysTimers": "Interface and impulse relays, time relays, timers and suppression modules.",
+      "automationMonitoringRelays": "Voltage, phase, current, temperature and liquid-level monitoring.",
+      "automationMeasuring": "Panel multimeters, energy meters, voltmeters and ammeters.",
+      "automationAts": "Automatic transfer switch controllers and changeover switches.",
+      "automationPushbuttons": "Pushbuttons, selector switches, control stations and components.",
+      "automationDrives": "Variable frequency drives for motors and their control panels.",
+      "automationIntercoms": "Video intercoms and doorbells for apartments and houses."
+    }
+  },
+  "footer": {
+    "ariaLabel": "Site footer",
+    "brand": {
+      "tagline": "Engineering Equipment",
+      "description": "Engineering equipment, documents, and selection tools for professional procurement."
+    },
+    "navigation": {
+      "ariaLabel": "Footer navigation",
+      "title": "Sections",
+      "home": "Home",
+      "catalog": "Catalog",
+      "brands": "Brands",
+      "tools": "Tools",
+      "documentation": "Documentation",
+      "contacts": "Contacts"
+    },
+    "contacts": {
+      "ariaLabel": "Contact information",
+      "title": "Contacts",
+      "phoneTitle": "Phone",
+      "phoneHint": "for orders and consultations",
+      "messagingHint": "send an SKU, photo, or request",
+      "addressTitle": "Address",
+      "addressValue": "Yerevan, showroom / warehouse",
+      "addressHint": "pickup and consultations by arrangement"
+    },
+    "legal": {
+      "copyright": "© {{year}} OhmX.am. All rights reserved.",
+      "notice": "Information on this website is provided for reference. Confirm delivery terms when placing an order."
+    }
+  },
+  "home": {
+    "intro": {
+      "closeAria": "Close the quick tour",
+      "caption": "Quick tour",
+      "title": "Use OhmX.am more efficiently",
+      "description": "In one minute, we will show you useful features: selection calculators, a personal AI assistant, customizable category shortcuts, documents, alternatives, and quick requests.",
+      "skip": "Skip the tour",
+      "start": "Got it, start",
+      "features": {
+        "calculators": {
+          "title": "Selection calculators",
+          "text": "Quickly calculate power, underfloor heating, and the equipment set for your task."
+        },
+        "assistant": {
+          "title": "Personal AI assistant",
+          "text": "Describe the space, brand, or SKU. The assistant will ask follow-up questions and prepare a selection."
+        },
+        "categories": {
+          "title": "Custom categories",
+          "text": "Pin the catalog directions you need and create a fast entry point for your workflow."
+        },
+        "documents": {
+          "title": "Documents and alternatives",
+          "text": "Open certificates and datasheets, or request alternatives directly from the storefront."
+        }
+      }
+    },
+    "categories": {
+      "caption": "Main directions",
+      "title": "Catalog categories",
+      "description": "Unified engineering navigation for Home, Header, and Catalog.",
+      "openAll": "Open the full catalog",
+      "loading": "Loading navigation…",
+      "groupFallback": "Catalog",
+      "viewCategory": "View category",
+      "openSection": "Open section",
+      "descriptions": {
+        "electrical": "mechanisms, frames, sockets, switches, and accessories",
+        "automation": "relays, controllers, sensors, actuators, and control systems",
+        "switchboards": "switchboard equipment and enclosures",
+        "protection": "modular and power protection",
+        "cableManagement": "cables, wires, cable ducts, trays, fasteners, and installation",
+        "industrialElectrical": "industrial connectors, contactors, and power protection",
+        "lighting": "technical luminaires, LED solutions, and industrial lighting",
+        "hvac": "ventilation, fan coils, radiators, boiler-room equipment, and climate systems",
+        "heating": "underfloor heating, heating mats, cables, and thermostats",
+        "waterSupply": "pumps and water supply",
+        "plumbing": "valves, fittings, pumps, hydraulics, and water supply",
+        "fasteners": "fasteners and installation accessories",
+        "electricalEquipment": "circuit breakers, protection, switchboard equipment, and engineering components"
+      }
+    },
+    "trust": {
+      "caption": "Why OhmX.am",
+      "title": "A public storefront for engineering sales",
+      "items": [
+        "Selection by SKU and brand",
+        "PDFs and datasheets",
+        "24/7 requests and contact"
+      ]
+    },
+    "quickActions": {
+      "catalog": {
+        "title": "Catalog",
+        "text": "All directions and root categories through one entry point."
+      },
+      "selection": {
+        "title": "Selection",
+        "text": "Have a part number, photo, or task? Start with product selection."
+      },
+      "documents": {
+        "title": "Documents",
+        "text": "Technical PDFs, instructions, data sheets, and certificates."
+      },
+      "contacts": {
+        "title": "Contacts",
+        "text": "Availability, pricing, delivery, and pickup."
+      }
+    },
+    "brands": {
+      "caption": "Brands",
+      "title": "Key manufacturers",
+      "openAll": "Open all brands"
+    },
+    "service": {
+      "caption": "Service and selection",
+      "title": "Could not find the product you need?",
+      "description": "Send a part number, photo, name, or task. We will find an alternative and confirm the price, availability, and lead time.",
+      "selectionCta": "Request a selection",
+      "searchCta": "Search by SKU"
+    },
+    "documents": {
+      "caption": "Documentation",
+      "title": "PDFs and datasheets",
+      "description": "Instructions, technical data sheets, certificates, and product documents.",
+      "openCta": "Open documents"
+    },
+    "products": {
+      "popular": {
+        "title": "Popular products",
+        "empty": "No popular products have been selected yet."
+      },
+      "recent": {
+        "title": "Recently viewed",
+        "empty": "Your viewing history will appear after you visit the catalog."
+      },
+      "favorites": {
+        "title": "Favorites",
+        "empty": "Add products to favorites to see them here."
+      }
+    },
+    "hero": {
+      "ariaLabel": "OhmX.am engineering control center",
+      "quickActionsAria": "Quick actions",
+      "chipsAria": "Popular tasks and categories",
+      "tabsAria": "Engineering hero slides",
+      "showSlide": "Show slide: {{headline}}",
+      "controlsAria": "Slider controls",
+      "previousSlide": "Previous slide",
+      "nextSlide": "Next slide",
+      "slides": {
+        "selection": {
+          "eyebrow": "OHMX.AM · ENGINEERING TEAM",
+          "headline": "Engineering equipment selection for your task",
+          "headlineWords": [
+            "Engineering selection",
+            "of equipment",
+            "for your task"
+          ],
+          "description": "We quickly select equipment, alternatives, documents, and components for installation, procurement, and maintenance.",
+          "actionLabels": [
+            "Select equipment",
+            "Open calculators",
+            "Contact an engineer"
+          ],
+          "chips": [
+            "HVAC",
+            "electrical",
+            "underfloor heating",
+            "switchboards",
+            "installation"
+          ],
+          "visual": {
+            "kicker": "Live selection",
+            "title": "Task → parameters → ready shortlist",
+            "metric": "15 min",
+            "meta": "to the first engineering response",
+            "rows": [
+              "Load and installation conditions",
+              "Compatible alternatives",
+              "Components and documents"
+            ]
+          }
+        },
+        "catalog": {
+          "eyebrow": "PRODUCT SOLUTIONS",
+          "headline": "A catalog organized around real engineering tasks, not just shelves",
+          "headlineWords": [
+            "Catalog",
+            "for engineering tasks",
+            "not just shelves"
+          ],
+          "description": "Quick access to key directions: sockets and mechanisms, switchboard equipment, cable, lighting, and climate systems.",
+          "actionLabels": [
+            "Open catalog",
+            "Sockets and switches",
+            "Switchboard equipment"
+          ],
+          "chips": [
+            "Legrand",
+            "Schneider",
+            "ABB",
+            "cable",
+            "automation"
+          ],
+          "visual": {
+            "kicker": "Task-based catalog",
+            "title": "Root categories + fast engineering scenarios",
+            "metric": "8",
+            "meta": "key catalog directions",
+            "rows": [
+              "Sockets and mechanisms",
+              "Switchboard equipment",
+              "Cable, trays, and installation"
+            ]
+          }
+        },
+        "documents": {
+          "eyebrow": "PDF · DATASHEET · SKU",
+          "headline": "Documents, data sheets, and manuals next to the product",
+          "headlineWords": [
+            "Documents and datasheets",
+            "right next",
+            "to the product"
+          ],
+          "description": "Search by SKU, brand, product name, or document. Find technical data for approval and installation faster.",
+          "actionLabels": [
+            "Find a PDF",
+            "Search by SKU",
+            "Documentation"
+          ],
+          "chips": [
+            "PDF",
+            "datasheet",
+            "manual",
+            "certificate",
+            "instructions"
+          ],
+          "visual": {
+            "kicker": "Documents",
+            "title": "SKU connects to PDFs, brands, and categories",
+            "metric": "PDF",
+            "meta": "fast access to technical data",
+            "rows": [
+              "Datasheets and instructions",
+              "Manuals and certificates",
+              "Search by part number and brand"
+            ]
+          }
+        },
+        "supply": {
+          "eyebrow": "PROJECT SUPPLY",
+          "headline": "Project supply from selection to alternative replacement",
+          "headlineWords": [
+            "Project supply",
+            "from selection",
+            "to alternatives"
+          ],
+          "description": "We select equipment for your budget, availability, technical requirements, and project compatibility.",
+          "actionLabels": [
+            "Send a request",
+            "Select alternatives",
+            "Open catalog"
+          ],
+          "chips": [
+            "alternatives",
+            "availability",
+            "selection",
+            "request",
+            "supply"
+          ],
+          "visual": {
+            "kicker": "Project supply",
+            "title": "BOM, alternatives, lead times, and compatibility in one workflow",
+            "metric": "BOM",
+            "meta": "project package ready for procurement",
+            "rows": [
+              "Compatibility check",
+              "Brand/SKU alternative selection",
+              "Supply and made-to-order items"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "product": {
+    "fallback": {
+      "product": "Product"
+    },
+    "states": {
+      "loading": "Loading..."
+    },
+    "errors": {
+      "load": "Could not load the product page. Refresh the page or send the SKU to a manager."
+    },
+    "mobileTitle": "Product page",
+    "devPreviewBanner": "DEV PREVIEW — demo ProductPage relationships for local visual checks only.",
+    "availability": {
+      "request": "Check availability"
+    },
+    "pricing": {
+      "onRequest": "On request"
+    },
+    "descriptionFallback": "A product description has not been added yet.",
+    "categoryFallback": "OhmX.am catalog",
+    "actions": {
+      "back": "Back",
+      "addFavorite": "Add to favorites",
+      "removeFavorite": "Remove from favorites",
+      "pin": "Pin product",
+      "unpin": "Unpin product",
+      "addToCart": "Add to cart",
+      "requestPrice": "Request price",
+      "requestAvailability": "Request availability",
+      "details": "Details",
+      "viewAlternative": "View alternative",
+      "openProduct": "Open product {{name}}",
+      "openSimilarProduct": "Open similar product {{name}}",
+      "detailsAria": "Details for product {{name}}",
+      "viewAlternativeAria": "View alternative {{name}}",
+      "addToCartAria": "Add {{name}} to cart",
+      "added": "Added",
+      "addedHint": "The product has been added to your cart.",
+      "goToCart": "Go to cart"
+    },
+    "gallery": {
+      "ariaLabel": "Product gallery",
+      "showImage": "Show image {{index}}"
+    },
+    "labels": {
+      "series": "Series {{series}}",
+      "price": "Price",
+      "category": "Category"
+    },
+    "specifications": {
+      "title": "Technical specifications",
+      "empty": "Specifications have not been filled in yet."
+    },
+    "documents": {
+      "title": "Documents",
+      "empty": "No documents have been uploaded for this product yet.",
+      "summaryAvailable": "Technical passports, manuals, and datasheets are available below.",
+      "summaryEmpty": "No documents have been added for this product yet.",
+      "allDocumentation": "All documentation",
+      "open": "Open",
+      "download": "Download",
+      "openAria": "Open document {{name}}",
+      "downloadAria": "Download document {{name}}",
+      "fileSizeUnknown": "Size not specified",
+      "types": {
+        "technicalPassport": "Technical passport",
+        "installationManual": "Installation manual",
+        "certificate": "Certificate",
+        "manufacturerCatalog": "Manufacturer catalog",
+        "connectionScheme": "Wiring diagram",
+        "warranty": "Warranty",
+        "declaration": "Declaration of conformity",
+        "cadBim": "CAD / BIM file",
+        "other": "Other"
+      }
+    },
+    "relationships": {
+      "required": {
+        "title": "Required for installation",
+        "badge": "Required",
+        "description": "Components without which installation or correct operation may be impossible."
+      },
+      "recommended": {
+        "title": "Recommended",
+        "badge": "Recommended",
+        "description": "Components for safety, reliability, or proper installation."
+      },
+      "optional": {
+        "title": "Optional",
+        "badge": "Optional",
+        "description": "Optional upgrades and functional extensions."
+      },
+      "alternatives": {
+        "title": "Alternatives",
+        "badge": "Alternative",
+        "description": "Products that can be selected instead of the current product.",
+        "note": "Alternatives replace the selected product and are usually not purchased together with it."
+      }
+    },
+    "status": {
+      "compatible": "Compatible",
+      "compatibleWhenConditionsMatch": "Compatible when conditions match",
+      "incompatible": "Incompatible",
+      "requiresManualReview": "Requires engineer review",
+      "unknown": "Needs clarification"
+    },
+    "values": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "conditions": {
+      "voltage": "Voltage",
+      "voltageMin": "Min. voltage",
+      "voltageMax": "Max. voltage",
+      "currentMax": "Max. current",
+      "powerMin": "Min. power",
+      "powerMax": "Max. power",
+      "sensorType": "Sensor type",
+      "sensorResistance": "Sensor resistance",
+      "controlSignal": "Control signal",
+      "mountingType": "Mounting type",
+      "compatibleSeries": "Compatible series",
+      "compatibleSystem": "Application system",
+      "application": "Application",
+      "floorType": "Floor covering",
+      "heatingType": "Heating type",
+      "coolingType": "Cooling type",
+      "indoorOnly": "Indoor installation",
+      "wetZoneAllowed": "Wet-zone allowed",
+      "requiresProtectionDevice": "Circuit protection required"
+    },
+    "engineeringChecks": {
+      "voltage": "Voltage",
+      "maxLoad": "Maximum load",
+      "power": "Power",
+      "mountingType": "Mounting type",
+      "sensorType": "Sensor type",
+      "applicationSystem": "Application system",
+      "compatibility": "Compatibility",
+      "ipRating": "IP rating",
+      "documentation": "Documentation",
+      "publicDocuments": "Public documents available",
+      "checkDocumentation": "Check the technical documentation"
+    },
+    "warnings": {
+      "title": "Compatibility warnings",
+      "description": "Incompatible products are not shown as a bundle purchase. Check specifications or contact an engineer before selecting.",
+      "orderNote": "Check specifications or contact an OhmX.am engineer before ordering."
+    },
+    "prePurchase": {
+      "title": "Check before purchase",
+      "description": "Before ordering, verify that the product fits your system, installation conditions, and required component set.",
+      "bullets": {
+        "compatibility": "Check product compatibility with your system and voltage.",
+        "parameters": "Verify required dimensions, power, rating, or module count.",
+        "requiredPresent": "Check required components in the “Required for installation” section.",
+        "requiredMissing": "Confirm whether required accessories or components are needed for installation.",
+        "warningsPresent": "Review compatibility warnings before adding to cart.",
+        "warningsMissing": "Check installation conditions, protection rating, and room limitations.",
+        "systemParts": "Verify the selected series, mechanism, frame, or accessories if the product is part of a system."
+      }
+    },
+    "similar": {
+      "title": "Similar products",
+      "description": "Products from the same category — for comparison and replacement."
+    },
+    "order": {
+      "title": "How to order",
+      "steps": {
+        "open": "1. Open the product and check the SKU.",
+        "add": "2. Add it to the cart or send a request.",
+        "confirm": "3. A manager will confirm price, availability, and lead time."
+      }
+    },
+    "delivery": {
+      "title": "Delivery and pickup",
+      "description": "Delivery and pickup are agreed after order confirmation. The public storefront does not show internal warehouse stock."
+    },
+    "variants": {
+      "title": "Other colours of this model"
+    },
+    "kit": {
+      "title": "Complete the {{family}} set",
+      "description": "The most requested items of this series: frames, switches, sockets and mounting accessories.",
+      "descriptionColor": "The most requested items of this series in “{{color}}”. Items without a colour fit any finish.",
+      "color": "Set colour",
+      "asThisProduct": "as this product",
+      "allColors": "All colours",
+      "universal": "Universal",
+      "showMore": "Show {{count}} more",
+      "showLess": "Show less",
+      "viewSeries": "Whole series in catalog",
+      "emptyColor": "No other items of this series in this colour. Choose another colour.",
+      "matchesProduct": "Fits this mechanism"
+    }
+  },
+  "aiTools": {
+    "actions": {
+      "calculating": "Calculating…"
+    },
+    "chat": {
+      "assistantLabel": "AI engineer",
+      "placeholder": "Describe the task...",
+      "processing": "AI is processing the description... use the cards above for quick answers.",
+      "title": "Dialog"
+    },
+    "description": "Describe the task in your own words; AI will ask clarifying questions and prepare a selection from real OhmX.am products.",
+    "empty": "After the minimum parameters are entered, calculation, kits and product selection will appear. Choose a mode above or describe the task.",
+    "errors": {
+      "request": "Request error"
+    },
+    "intents": {
+      "cooling": "Cooling",
+      "electrical": "Electrical",
+      "heating": "Heating"
+    },
+    "parameters": {
+      "caption": "Parameters"
+    },
+    "product": {
+      "areaBadge": "up to {{area}} m²"
+    },
+    "progress": "Step {{step}} of {{total}}",
+    "quick": {
+      "economy": "I want an economy option",
+      "hasGas": "Gas available",
+      "noGas": "No gas, electric only",
+      "optimal": "I want an optimal option",
+      "premium": "I want a premium option",
+      "title": "Quick options"
+    },
+    "result": {
+      "bundleText": "Ready levels: economy, optimal, premium.",
+      "bundles": "Kits",
+      "calculation": "Calculation",
+      "engineerRecommendation": "AI engineer recommendation",
+      "estimatedCost": "Estimated cost",
+      "floorHeatingAnalysis": "Warm floor engineering analysis",
+      "installedPower": "Installed power",
+      "powerCoverage": "Power coverage",
+      "recommendedSystems": "Recommended systems",
+      "requiredPower": "Required power",
+      "roomProject": "Room-by-room engineering project",
+      "totalPower": "Total power"
+    },
+    "rooms": {
+      "hint": "Tap rooms to add them to the calculation.",
+      "selected": "Selected rooms"
+    },
+    "startQuestion": "What should be selected?",
+    "title": "AI engineering equipment selection",
+    "unavailable": "AI selection is temporarily unavailable. Use standard calculators or send a manager request.",
+    "validation": {
+      "checkField": "Check field: {{field}}",
+      "fillField": "Fill field: {{field}}",
+      "numberRange": "Enter a value from {{min}} to {{max}}{{unit}}",
+      "selectOneRoom": "Choose at least one room"
+    }
+  },
+  "auth": {
+    "actions": {
+      "create": "Create account"
+    },
+    "already": {
+      "caption": "Account",
+      "description": "Your profile is already created. In the account you can check history, favorites and AI selection preferences.",
+      "openProfile": "Open account",
+      "title": "You are already signed in"
+    },
+    "breadcrumb": "Registration",
+    "budgetHints": {
+      "economy": "minimal price without extras",
+      "optimal": "balance of price, availability and quality",
+      "premium": "best brands and durability reserve"
+    },
+    "description": "The profile saves cart, favorites, engineering requests, AI selection history and preferences for repeat orders.",
+    "fields": {
+      "aiNotes": "Note for AI",
+      "email": "Email",
+      "interestedDirections": "Interested directions",
+      "name": "Name",
+      "phone": "Phone number",
+      "preferredBrands": "Preferred brands",
+      "projectTypes": "Project types",
+      "rememberHistoryText": "AI will see past tasks, selected directions and preferences in this browser and local database.",
+      "rememberHistoryTitle": "Remember AI selection history.",
+      "role": "User type",
+      "specializations": "Specializations"
+    },
+    "placeholders": {
+      "aiNotes": "Example: always suggest the optimal option, do not show cheap brands, consider old Android devices at clients...",
+      "name": "Example: Arthur"
+    },
+    "preferences": {
+      "caption": "Preferences for AI",
+      "description": "These details will be used by the AI engineer: budget, favorite brands, directions and notes.",
+      "title": "So the site remembers the customer"
+    },
+    "roles": {
+      "consumer": {
+        "text": "Fast purchases, cart, favorites and task-based recommendations.",
+        "title": "Customer"
+      },
+      "installer": {
+        "text": "Specializations, projects, personal selections and repeat requests.",
+        "title": "Installer / engineer"
+      }
+    },
+    "title": "Registration and account",
+    "validation": {
+      "email": "Enter a valid email",
+      "name": "Enter a name",
+      "phone": "Enter a phone number",
+      "role": "Choose a user type",
+      "specializations": "Choose at least one specialization"
+    }
+  },
+  "calculator": {
+    "common": {
+      "accessories": "Accessories",
+      "accessory": "Accessory",
+      "accessoryProduct": "Accessory product",
+      "addAccessories": "Add accessories",
+      "enableAccessories": "Enable accessories",
+      "preorderNote": "Preorder delivery, timing to be confirmed",
+      "removeAccessories": "Remove accessories",
+      "showAccessories": "Show accessories"
+    },
+    "power": {
+      "actions": {
+        "calculate": "Calculate",
+        "calculating": "Calculating…"
+      },
+      "alerts": {
+        "emailError": "Send error",
+        "emailRequired": "To send by email, register and add email.",
+        "emailSent": "Selection sent to your email",
+        "linkCopied": "Selection link copied",
+        "networkError": "network error",
+        "smtpNotConfigured": "SMTP is not configured"
+      },
+      "analysis": {
+        "analyzing": "Analyzing the room…",
+        "caption": "Engineering analysis",
+        "matching": "Selecting equipment…"
+      },
+      "authRequired": {
+        "text": "Register or sign in to use the power calculator and get personal equipment selections.",
+        "title": "Registration is required for calculation"
+      },
+      "breadcrumb": "Power calculator",
+      "caption": "OhmX.am tools",
+      "description": "Pre-calculate required equipment power in kW. Choose the system type and get real products from the site database.",
+      "document": {
+        "autoKit": "automatic kit",
+        "calculationType": "Calculation type",
+        "extraParameters": "Extra parameters",
+        "inSelection": "In selection",
+        "productsCount": "{{count}} product(s)",
+        "title": "Equipment selection"
+      },
+      "email": {
+        "areaHeight": "Area / height",
+        "engineeringEquipment": "engineering equipment",
+        "getByEmail": "Get selection by email",
+        "openOnSite": "Open selection on site",
+        "requiredPower": "Calculated power",
+        "selectionTitle": "Selection",
+        "sendTitle": "Send by email",
+        "sendTo": "Send to {{email}}",
+        "subjectPrefix": "Selection",
+        "systemNotSelected": "System: not selected yet"
+      },
+      "emailRequired": {
+        "text": "Add an email in profile settings to send calculation results.",
+        "title": "Add email in profile"
+      },
+      "empty": {
+        "fillForm": "Fill the form and click Calculate.",
+        "noAccessories": "No accessories found.",
+        "noProducts": "No matching products found. Send a manager request for manual selection.",
+        "selectHeatingType": "Choose heating type, fill room data and click Calculate."
+      },
+      "errors": {
+        "calculate": "Could not calculate",
+        "recommendations": "Could not select equipment",
+        "invalidMode": "Select heating or cooling mode.",
+        "invalidArea": "Enter a valid room area.",
+        "invalidHeight": "Enter a valid ceiling height."
+      },
+      "form": {
+        "area": "Room area, m²",
+        "gasAvailability": "Gas availability",
+        "hasGas": "Gas available",
+        "heatingType": "Heating type",
+        "height": "Ceiling height, m",
+        "noGas": "No gas",
+        "roomData": "Room data",
+        "systemType": "System type"
+      },
+      "heatingTypes": {
+        "electric": {
+          "text": "Convector / pump / cable",
+          "title": "Electric"
+        },
+        "water": {
+          "text": "Boiler + radiators / warm floor",
+          "title": "Hydronic"
+        }
+      },
+      "manager": {
+        "defaultIntent": "Selection by power calculator",
+        "intentPrefix": "Selection"
+      },
+      "modes": {
+        "cooling": {
+          "genitive": "cooling",
+          "label": "Cooling"
+        },
+        "heating": {
+          "genitive": "heating",
+          "label": "Heating"
+        }
+      },
+      "nextStep": {
+        "caption": "Next step",
+        "electricOnly": "Electric only",
+        "electricText": "Choose electric boiler, heat pump, convector or warm floor.",
+        "gasText": "We will select a gas boiler and related boiler-room products.",
+        "loading": "Selecting products for the chosen system…",
+        "text": "After power calculation choose the approach: gas boiler or electric solution.",
+        "title": "Choose system type"
+      },
+      "options": {
+        "cooling": {
+          "kitchen_heat": "Kitchen or room with heat sources",
+          "many_people": "Many people in the room",
+          "power_reserve": "Power reserve needed",
+          "sunny_side": "Sunny side / many windows",
+          "top_floor_poor_insulation": "Top floor / poorly insulated room"
+        },
+        "heating": {
+          "corner_room": "Corner room",
+          "first_last_floor": "First/last floor",
+          "large_windows": "Large windows",
+          "poor_insulation": "Poorly insulated room",
+          "power_reserve": "Power reserve needed"
+        }
+      },
+      "result": {
+        "disclaimerPrefix": "Calculation is based on area, ceiling height and selected conditions.",
+        "volumeCoefficient": "Volume × coeff.",
+        "rangeAbove": "from {{min}} kW",
+        "rangeBetween": "{{min}}–{{max}} kW",
+        "explanation": "For a {{volume}} m³ room, the base specific load is {{baseSpecificPower}} W/m³ ({{basePower}} kW). After the ×{{coefficient}} condition factor, calculated output is {{power}} kW; recommended range: {{range}}.",
+        "engineeringDisclaimer": "Preliminary equipment sizing only. Engineering-system design requires a complete heating/cooling load calculation."
+      },
+      "sections": {
+        "mainEquipment": "Main equipment",
+        "recommendedEquipment": "Recommended equipment"
+      },
+      "systems": {
+        "electric_boiler": {
+          "label": "Electric boiler",
+          "text": "For hydronic heating with radiators or warm floor."
+        },
+        "electric_convector": {
+          "label": "Electric convector",
+          "text": "Fast solution for rooms without hydronic heating."
+        },
+        "floor_heating": {
+          "label": "Warm floor / heating cable",
+          "text": "Comfort local heating."
+        },
+        "gas_boiler": {
+          "label": "Gas boiler",
+          "text": "Select a gas boiler and boiler-room products."
+        },
+        "heat_pump": {
+          "label": "Heat pump",
+          "text": "Energy-efficient heating and cooling."
+        },
+        "infrared_heating": {
+          "label": "Infrared heating",
+          "text": "Local electric heating."
+        }
+      },
+      "title": "Cooling/heating power calculator",
+      "recommendations": {
+        "nextStep": "{{system}} was selected after the {{requiredPowerKw}} kW load calculation.",
+        "noCatalogProduct": "No catalogue equipment matches {{system}} at {{requiredPowerKw}} kW. Send the required specifications to a specialist."
+      }
+    },
+    "warmFloor": {
+      "accessories": {
+        "title": "Required system components",
+        "subtitle": "Professional kit: control, thermostat mounting, line protection and fixing. Required items are marked.",
+        "required": "Required",
+        "recommended": "Recommended",
+        "kitItem": "Kit item",
+        "estimate": "Estimate",
+        "replacementsTitle": "Cheaper replacements",
+        "replacementsText": "You can replace individual items with more affordable alternatives after the premium kit."
+      },
+      "actions": {
+        "changeParams": "Change parameters",
+        "calculating": "Calculating…",
+        "getEngineeringResult": "Get engineering result"
+      },
+      "brand": {
+        "autoText": "Sorted by compatibility, availability, price and power without hard brand lock.",
+        "autoTitle": "Professional auto selection",
+        "options": {
+          "devi": {
+            "strengths": "Premium DEVI/Danfoss system with compatible DEVIreg controls.",
+            "note": "Ranked first only after technical compatibility is confirmed."
+          },
+          "fenix": {
+            "strengths": "Reliable Standard-tier mats and cables with balanced cost and performance.",
+            "note": "Used as a technically compatible lower-cost alternative."
+          },
+          "hif": {
+            "strengths": "Economy option for budget-constrained projects.",
+            "note": "Shown only when the specific product is technically compatible."
+          }
+        }
+      },
+      "catalogKits": {
+        "caption": "Catalog kits",
+        "density": "Density",
+        "productCost": "Product cost",
+        "spacingArea": "Spacing/area",
+        "title": "Recommended solutions",
+        "variant": "Variant",
+        "premiumBadge": "Premium",
+        "replacementBadge": "Replacement",
+        "targetDensity": "Target W/m²",
+        "current": "Current"
+      },
+      "coverings": {
+        "engineered_wood": {
+          "hint": "Only after checking heating allowance.",
+          "label": "Engineered wood"
+        },
+        "laminate": {
+          "hint": "Covering datasheet and floor temperature limit are required.",
+          "label": "Laminate"
+        },
+        "other": {
+          "hint": "Compatibility must be confirmed before purchase.",
+          "label": "Other"
+        },
+        "porcelain": {
+          "hint": "Good heat transfer; mat or cable can be used.",
+          "label": "Porcelain tile"
+        },
+        "stone": {
+          "hint": "Requires careful temperature control.",
+          "label": "Stone"
+        },
+        "tile": {
+          "hint": "Best scenario for cables and mats.",
+          "label": "Tile"
+        },
+        "vinyl": {
+          "hint": "Limit power and temperature according to LVT datasheet.",
+          "label": "Vinyl tile (LVT)"
+        }
+      },
+      "empty": {
+        "text": "Parameters may require manual review: change area, system or brand, or request engineering selection.",
+        "title": "Automatic selection returned no results"
+      },
+      "errors": {
+        "loadTitle": "Calculator could not load data"
+      },
+      "heating": {
+        "additional_heating": {
+          "hint": "Helps the main heating system.",
+          "label": "Additional heating"
+        },
+        "comfort_floor": {
+          "hint": "So tile or stone does not feel cold.",
+          "label": "Comfort floor"
+        },
+        "local_zone": {
+          "hint": "Small zone with quick effect.",
+          "label": "Local heating"
+        },
+        "main_heating": {
+          "hint": "Requires a separate heat-loss calculation.",
+          "label": "Main heating"
+        }
+      },
+      "hero": {
+        "cards": {
+          "floor": {
+            "text": "substrate + covering",
+            "title": "Floor build-up"
+          },
+          "kit": {
+            "text": "controller + protection",
+            "title": "Kit"
+          },
+          "system": {
+            "text": "auto system choice",
+            "title": "Cable / mat"
+          }
+        },
+        "description": "Calculates useful area, power, cable spacing, mounting tape length, thermostat and accessories. Considers substrate, covering, wet zone, brand and real catalog products.",
+        "start": "Start professional calculation",
+        "title": "Professional electric warm floor selection",
+        "badge": "Engineering calculator V3"
+      },
+      "installation": {
+        "actualCoverage": "Actual coverage",
+        "byCovering": "By covering",
+        "cableSpacing": "Cable spacing",
+        "freeCable": "For loose cable",
+        "fromUsefulArea": "From useful area",
+        "matArea": "Mat area",
+        "matCoverage": "Mat coverage",
+        "mountingTape": "Mounting tape",
+        "temperatureLimit": "Temperature limit",
+        "title": "Installation parameters",
+        "withReserve": "With reserve"
+      },
+      "insulation": {
+        "good": {
+          "hint": "Energy-efficient house or insulated floor build-up.",
+          "label": "Good"
+        },
+        "poor": {
+          "hint": "Old building, cold substrate or balcony.",
+          "label": "Poor"
+        },
+        "standard": {
+          "hint": "Modern housing without obvious heat losses.",
+          "label": "Standard"
+        },
+        "excellent": {
+          "label": "Excellent",
+          "hint": "Energy-efficient building with a well-insulated floor build-up."
+        }
+      },
+      "liveBrief": "Live brief",
+      "loading": "Loading engineering rules...",
+      "output": {
+        "caption": "What you get",
+        "items": {
+          "power": "Calculated and actual power, W/m²",
+          "spacing": "Cable spacing or mat area",
+          "tape": "Mounting tape with reserve",
+          "thermostat": "Thermostat, sensor, conduit, protection",
+          "warnings": "Warnings before purchase and installation"
+        },
+        "title": "Ready engineering checklist"
+      },
+      "page": {
+        "breadcrumb": "Warm floor calculator",
+        "description": "Calculation of cables, mats, mounting tape, thermostats and accessories with covering, substrate and brand considered.",
+        "title": "Electric warm floor calculator"
+      },
+      "progress": "Step {{step}} of {{total}} · {{progress}}%",
+      "result": {
+        "caption": "Engineering report",
+        "cards": {
+          "actualPower": "Actual power",
+          "current": "Current",
+          "required": "Required",
+          "selected": "Selected"
+        },
+        "description": "Check power, spacing, accessories and warnings before buying.",
+        "hints": {
+          "byArea": "by area and mode",
+          "catalogProduct": "catalog product",
+          "installArea": "by useful area",
+          "protection": "for protection"
+        },
+        "title": "Warm floor calculation is ready",
+        "requiredPower": "Required output"
+      },
+      "review": {
+        "installArea": "Installation area",
+        "installation": "Installation",
+        "insulation": "Insulation",
+        "title": "Check parameters",
+        "totalArea": "Room area",
+        "excludedArea": "Excluded area",
+        "usefulArea": "Heated area"
+      },
+      "rooms": {
+        "balcony": {
+          "hint": "Usually needs higher power reserve and insulation check.",
+          "label": "Balcony / loggia"
+        },
+        "bathroom": {
+          "hint": "Wet zone: protection and floor sensor are required.",
+          "label": "Bathroom"
+        },
+        "bedroom": {
+          "hint": "Prefer soft comfort heating without overheating the covering.",
+          "label": "Bedroom"
+        },
+        "corridor": {
+          "hint": "Suitable for local comfort heating in passage area.",
+          "label": "Corridor / entry"
+        },
+        "kitchen": {
+          "hint": "Exclude kitchen furniture and large appliances from installation area.",
+          "label": "Kitchen"
+        },
+        "living_room": {
+          "hint": "Comfort mode usually needs moderate power.",
+          "label": "Living room"
+        },
+        "local_zone": {
+          "hint": "For a mirror, workplace or entry zone.",
+          "label": "Local zone"
+        },
+        "other": {
+          "hint": "Clarify floor build-up and covering requirements.",
+          "label": "Other"
+        }
+      },
+      "steps": {
+        "area": {
+          "description": "Enter the full room area. Next step excludes furniture, bath, kitchen and appliances.",
+          "eyebrow": "Area",
+          "title": "Total room area"
+        },
+        "brand": {
+          "description": "You can keep professional auto selection by availability and compatibility.",
+          "title": "Preferred brand"
+        },
+        "covering": {
+          "description": "For laminate, LVT and wood the covering temperature limit is especially important.",
+          "eyebrow": "Covering",
+          "title": "Final floor covering"
+        },
+        "heating": {
+          "description": "Comfort floor and main heating are different scenarios by power and risks.",
+          "eyebrow": "Mode",
+          "title": "What is the heating for?"
+        },
+        "installArea": {
+          "description": "Do not install cable/mat under fixed furniture without ventilation gap.",
+          "eyebrow": "Installation zone",
+          "helperSuffix": "of total area. Usually useful area is 65–90%.",
+          "title": "Useful installation area"
+        },
+        "insulation": {
+          "description": "This affects engineering checks and power-reserve warnings.",
+          "eyebrow": "Heat loss",
+          "title": "Insulation level"
+        },
+        "room": {
+          "description": "The room defines base power, wet zone and heating reserve.",
+          "eyebrow": "Room",
+          "title": "Where will the warm floor be?"
+        },
+        "substrate": {
+          "description": "The substrate determines whether a mat, loose cable or special project is needed.",
+          "eyebrow": "Substrate",
+          "title": "What is the floor build-up?"
+        },
+        "system": {
+          "description": "If unsure, keep auto selection: it considers covering, substrate and product availability.",
+          "eyebrow": "System",
+          "title": "Mat, cable or auto selection?"
+        }
+      },
+      "substrates": {
+        "concrete_screed": {
+          "hint": "Flexible option: cable in screed or mat by project.",
+          "label": "Concrete screed"
+        },
+        "insulation_board": {
+          "hint": "Check board and adhesive compatibility.",
+          "label": "Insulation board"
+        },
+        "old_tile": {
+          "hint": "Usually mat in adhesive layer without raising floor.",
+          "label": "Old tile"
+        },
+        "other": {
+          "hint": "Substrate check is needed before selection.",
+          "label": "Other"
+        },
+        "tile_adhesive": {
+          "hint": "Thin heating mat is usually selected.",
+          "label": "Tile adhesive"
+        },
+        "wood": {
+          "hint": "Separate dry/special solution is needed.",
+          "label": "Wood floor"
+        }
+      },
+      "systems": {
+        "auto": {
+          "hint": "OhmX will choose mat or cable by covering, substrate and availability.",
+          "label": "Auto selection"
+        },
+        "cable": {
+          "hint": "Flexible layout, screed, complex room shape.",
+          "label": "Heating cable"
+        },
+        "mat": {
+          "hint": "Thin layer, tile adhesive, fast installation.",
+          "label": "Heating mat"
+        }
+      },
+      "warnings": {
+        "defaults": {
+          "electrician": "Connection must be done by a qualified electrician.",
+          "noFurniture": "Do not install under fixed furniture without ventilation.",
+          "noShorten": "Heating cable must not be shortened."
+        },
+        "title": "Check before buying"
+      },
+      "tiers": {
+        "premium": "Premium",
+        "standard": "Standard",
+        "economy": "Economy"
+      },
+      "validation": {
+        "suspiciousHeatedArea": "The heated area is {{percent}}% of the room. Check fixed furniture and excluded zones."
+      },
+      "explanation": {
+        "title": "Why this option was selected",
+        "why": "Why selected",
+        "mounting": "Installation compatibility",
+        "performance": "Area and output",
+        "price": "Equipment tier"
+      },
+      "fallback": {
+        "systemType": "System type",
+        "maxLinearPower": "Max. linear output",
+        "thermostatLoad": "Min. thermostat load",
+        "rejectionReasons": "Reasons products were rejected"
+      },
+      "important": {
+        "title": "Important notes",
+        "electricalDisclaimer": "The final protection devices, wiring diagram and supply-cable cross-section must follow the project, manufacturer instructions and the requirements of the actual installation. Installation must be performed by a qualified electrician.",
+        "missingAccessories": "Items not available in the current catalogue"
+      },
+      "engineering": {
+        "validation": {
+          "roomAreaRequired": "Enter a valid room area.",
+          "heatedAreaRequired": "Enter the actual heated area.",
+          "heatedAreaExceedsRoom": "The heated area cannot exceed the room area.",
+          "excludedAreaMismatch": "Check excluded zones: roomArea − excludedArea must equal heatedArea.",
+          "suspiciousHeatedArea": "The heated area {{heatedAreaM2}} m² is {{ratioPercent}}% of the room. Check fixed furniture and other excluded zones.",
+          "roomArea": "Room area must be at least {{min}} m².",
+          "heatedArea": "Heated area must be at least {{min}} m²."
+        },
+        "warnings": {
+          "noShorten": "Do not shorten the heating cable; product length is fixed.",
+          "noCrossing": "Heating runs must not cross or be installed under fixed furniture without clearance.",
+          "floorTemperatureLimit": "The floor covering has a {{temperatureC}} °C floor-temperature limit.",
+          "poorInsulation": "Poor insulation increases the design output; reduce heat loss through the subfloor first.",
+          "mainHeatingNeedsHeatLoss": "Primary heating requires a room heat-loss calculation; this result is preliminary equipment sizing.",
+          "currentLoad": "Calculated current of the selected system: {{currentA}} A at {{voltageV}} V.",
+          "cableSpacing": "Calculated cable spacing: {{spacingCm}} cm. Verify the permitted range in the product manual.",
+          "matCoverageLow": "The mat covers only {{coveragePercent}}% of the heated area.",
+          "highActualPower": "Actual output {{actualWm2}} W/m² is close to the covering limit.",
+          "adhesiveMatOnly": "A thin tile-adhesive layer accepts only a mat explicitly approved by its manufacturer for that installation.",
+          "stoneSurface": "Stone requires verification of movement joints and the covering manufacturer’s instructions.",
+          "vinylSpecialSystem": "Vinyl/LVT requires a system explicitly approved by both covering and heater manufacturers, with floor-temperature limiting.",
+          "coveringTemperatureLimit": "Limit floor temperature to {{maxFloorTempC}} °C.",
+          "commercialReplacement": "This is a lower-cost {{tier}} replacement shown after technical filtering.",
+          "heatedAreaSuspicious": "The heated area is {{percent}}% of the room. Check fixed zones.",
+          "noFixedFurniture": "Do not install heating elements under fixed furniture unless the required clearance is provided.",
+          "rcdRequired": "Provide an RCD/RCBO with IΔn no more than 30 mA for domestic floor heating.",
+          "qualifiedElectrician": "Connection and final protection selection must be completed by a qualified electrician to the project.",
+          "sensorRequired": "Use a thermostat with a floor sensor and covering-temperature limit.",
+          "heatLossRequired": "Primary heating requires a complete room heat-loss calculation.",
+          "coveringLimit": "Output is limited to {{maxWm2}} W/m² and floor temperature to {{maxFloorTempC}} °C.",
+          "coveringManufacturerApproval": "Written covering-manufacturer approval is required; floor limit {{maxFloorTempC}} °C.",
+          "specialDrySystemRequired": "This construction requires a special dry system.",
+          "insulationRecommended": "Improve subfloor insulation before installation.",
+          "cableSpacingOutOfRange": "Spacing {{spacingCm}} cm is outside {{minCm}}–{{maxCm}} cm.",
+          "cableSpacingLow": "Spacing {{spacingCm}} cm is low; preferred minimum {{preferredMinCm}} cm.",
+          "cableSpacingHigh": "Spacing {{spacingCm}} cm is high; preferred maximum {{preferredMaxCm}} cm.",
+          "linearPowerTooHigh": "Linear output {{linearPowerWm}} W/m exceeds {{maxLinearPowerWm}} W/m.",
+          "powerUnder": "Actual output is {{powerFitPercent}}% of the requirement.",
+          "powerOver": "Actual output is {{powerFitPercent}}% of the requirement and exceeds the permitted reserve.",
+          "thermostatRelayLimit": "Current {{currentA}} A reaches {{thresholdPercent}}% of the {{relayA}} A relay; check a contactor or zone split."
+        },
+        "variantRoles": {
+          "premium": "Recommended kit · Premium",
+          "standard": "Best available kit · Standard",
+          "economy": "Best available kit · Economy",
+          "replacement_standard": "Alternative · Standard",
+          "replacement_economy": "Alternative · Economy",
+          "alternative_premium": "Another option · Premium",
+          "alternative_standard": "Another option · Standard",
+          "alternative_economy": "Another option · Economy"
+        },
+        "explanations": {
+          "whyMat": "{{brand}} {{model}} was selected because it is a compatible mat whose output matches the {{requiredPowerW}} W design load.",
+          "whyCable": "{{brand}} {{model}} was selected because it is a compatible fixed-length cable matching the required output and linear rating.",
+          "mountingMat": "The mat is compatible with “{{substrate}}” according to available catalogue data.",
+          "mountingCable": "The cable is intended for screed installation; calculated spacing {{spacingCm}} cm is within the permitted range.",
+          "performanceMat": "Heated area {{heatedAreaM2}} m²; {{selectedPowerW}} W provides {{actualWm2}} W/m² and {{coveragePercent}}% coverage.",
+          "performanceCable": "Heated area {{heatedAreaM2}} m²; {{selectedPowerW}} W provides {{actualWm2}} W/m² at {{spacingCm}} cm spacing.",
+          "commercialPremium": "Premium is ranked first only after technical compatibility has been confirmed.",
+          "commercialReplacement": "This option costs less or belongs to a lower tier, but passed the same technical checks.",
+          "commercialBestAvailable": "This is the best available technically compatible {{tier}} option in the current catalogue."
+        },
+        "accessoryGroups": {
+          "thermostat": "Thermostat",
+          "floor_sensor": "Floor sensor",
+          "mounting_box": "Mounting box",
+          "corrugated_tube": "Sensor conduit",
+          "circuit_breaker": "Circuit breaker",
+          "rcd": "30 mA RCD",
+          "rcbo": "RCBO",
+          "mounting_tape": "Mounting tape",
+          "contactor": "Contactor"
+        },
+        "accessoryNotes": {
+          "thermostat": "Thermostat for electric floor heating; rated load {{loadA}} A.",
+          "thermostatReplacement": "A lower-cost compatible thermostat replacement.",
+          "floorSensor": "A separate floor sensor is required when inclusion with the thermostat is not confirmed.",
+          "mountingBox": "Mounting box for a flush thermostat.",
+          "sensorConduit": "Install the floor sensor in a capped conduit so it can be replaced.",
+          "sensorConduitManual": "Allow for a capped Ø{{diameterMinMm}}–{{diameterMaxMm}} mm sensor conduit.",
+          "breakerOrientation": "Sizing guide: I={{currentA}} A, I_design={{designCurrentA}} A, next rating {{ratingA}} A. This is not a universal design rule.",
+          "rcd": "Typical domestic floor-heating guidance: residual operating current no more than {{tripMa}} mA.",
+          "rcboAlternative": "An {{ratingA}} A / {{tripMa}} mA RCBO may replace separate MCB + RCD after project verification.",
+          "rcbo": "Combined protection: {{ratingA}} A / {{tripMa}} mA RCBO.",
+          "breakerReplacement": "Compatible circuit-breaker alternative with a close rating.",
+          "rcdReplacement": "Compatible 30 mA RCD alternative.",
+          "mountingTape": "Required ≈ {{requiredLengthMeters}} m. {{packageLengthMeters}} m pack → {{packageCount}} packs.",
+          "contactor": "Current {{currentA}} A reaches the {{thresholdPercent}}% threshold of the {{relayA}} A relay. Check a contactor or zone split."
+        },
+        "accessoryReasons": {
+          "control": "System control and floor-temperature limiting",
+          "replacement": "Lower-cost compatible replacement",
+          "temperatureControl": "Floor-covering temperature control",
+          "mounting": "Thermostat installation",
+          "sensorServicePath": "Sensor protection and serviceability",
+          "overcurrentProtection": "Overcurrent protection",
+          "residualProtection": "Residual-current protection",
+          "protectionAlternative": "Alternative protection arrangement",
+          "combinedProtection": "Combined protection",
+          "cableFixing": "Maintaining calculated cable spacing",
+          "relayRelief": "Thermostat-relay load relief"
+        },
+        "manualItems": {
+          "sensorConduit": "Capped floor-sensor conduit"
+        },
+        "requirements": {
+          "thermostat": "A floor-heating thermostat with floor-sensor input and at least {{minimumLoadA}} A rating is required.",
+          "floorSensor": "A compatible floor-temperature sensor is required.",
+          "mountingBox": "A mounting box compatible with the thermostat is required.",
+          "breaker": "A circuit breaker is required; {{orientationRatingA}} A is a sizing guide only. Final selection depends on the project and cable size.",
+          "residualProtection": "An RCD or RCBO with IΔn no more than {{maximumTripMa}} mA and rated current at least {{minimumRatedCurrentA}} A is required.",
+          "mountingTape": "Approximately {{requiredLengthMeters}} m of mounting tape is required for the cable.",
+          "contactor": "Check a contactor or zone split: load {{currentA}} A, relay {{relayA}} A, threshold {{thresholdPercent}}%."
+        },
+        "fallback": {
+          "noSuitableProduct": "No suitable product was found in the current catalogue.",
+          "invalidInput": "Correct the input data before selecting equipment."
+        },
+        "systemTypes": {
+          "mat": "Heating mat",
+          "cable": "Heating cable",
+          "special_system": "Special system",
+          "auto": "Automatic selection"
+        },
+        "compatibility": {
+          "productCoveringMismatch": "The product is not approved for the selected covering.",
+          "explicitCoveringApprovalRequired": "No manufacturer approval is recorded for the selected covering.",
+          "productSubstrateMismatch": "The product is not approved for the selected substrate.",
+          "productRoomMismatch": "The product is not approved for this room type.",
+          "matNotAllowedForCovering": "A standard heating mat is incompatible with the covering.",
+          "matNotAllowedForSubstrate": "The heating mat is incompatible with the installation method.",
+          "thinLayerManufacturerApprovalMissing": "Manufacturer approval for thin-layer/tile-adhesive installation is missing.",
+          "matAreaMissing": "Mat area is missing from the catalogue.",
+          "matAreaExceedsHeatedArea": "Mat area exceeds the heated area.",
+          "matCoverageTooLow": "The mat covers too little of the heated area.",
+          "cableNotAllowedForCovering": "The heating cable is incompatible with the covering.",
+          "cableNotAllowedForSubstrate": "The heating cable is incompatible with the installation method.",
+          "standardWetSystemBlocked": "A standard wet system is blocked for this construction.",
+          "cableLengthMissing": "Cable length is missing from the catalogue.",
+          "linearPowerMissing": "Cable linear output is missing from the catalogue.",
+          "linearPowerTooHigh": "Cable linear output exceeds the permitted limit.",
+          "cableSpacingOutOfRange": "Calculated cable spacing is outside the permitted range.",
+          "unsupportedMainProductType": "This product type is not supported by the calculator.",
+          "powerMissing": "Reliable product output is missing.",
+          "coveringPowerExceeded": "Specific output exceeds the covering limit.",
+          "powerTooLow": "Product output is below the requirement.",
+          "powerTooHigh": "Product output exceeds the permitted reserve.",
+          "wetZoneNotAllowed": "The product is not approved for a wet zone.",
+          "wetZoneApprovalMissing": "Wet-zone approval is not confirmed.",
+          "unavailable": "The product is unavailable."
+        }
+      }
+    }
+  },
+  "common": {
+    "actions": {
+      "addToCart": "Add to cart",
+      "addToSelection": "Add to selection",
+      "back": "Back",
+      "clear": "Clear",
+      "compare": "Compare",
+      "continue": "Continue",
+      "copyLink": "Copy link",
+      "details": "Details",
+      "downloadPdf": "Download PDF",
+      "login": "Log in",
+      "logout": "Log out",
+      "managerRequest": "Request to manager",
+      "next": "Next",
+      "open": "Open",
+      "openAiSelector": "Open AI selector",
+      "openProduct": "Open product",
+      "printPdf": "Download PDF / Print",
+      "register": "Register",
+      "remove": "Remove",
+      "requestPrice": "Request price",
+      "reset": "Reset",
+      "retry": "Try again",
+      "saved": "Saved",
+      "send": "Send",
+      "sending": "Sending…",
+      "skip": "Skip",
+      "toEmail": "To e-mail"
+    },
+    "fallbacks": {
+      "auto": "Auto",
+      "autoSelection": "auto selection",
+      "availabilityUnknown": "Status to be confirmed",
+      "empty": "Empty for now.",
+      "inStock": "In stock",
+      "lowOrMixed": "Low / mixed",
+      "lowStock": "Low stock",
+      "noBrand": "No brand",
+      "notSelected": "not selected",
+      "notSelectedYet": "not selected yet",
+      "nothingSelected": "Nothing selected yet",
+      "preorder": "Preorder",
+      "priceRequest": "On request",
+      "unavailable": "Unavailable"
+    },
+    "labels": {
+      "advanced": "Advanced",
+      "area": "Area",
+      "article": "Article",
+      "availability": "Availability",
+      "brand": "Brand",
+      "brands": "Brands",
+      "catalog": "Catalog",
+      "categories": "Categories",
+      "category": "Category",
+      "equipment": "Equipment",
+      "gas": "Gas",
+      "height": "Height",
+      "home": "Home",
+      "link": "Link",
+      "of": "of",
+      "photo": "Photo",
+      "power": "Power",
+      "price": "Price",
+      "product": "Product",
+      "products": "Products",
+      "quantity": "Quantity",
+      "range": "Range",
+      "series": "Series",
+      "subcategories": "Subcategories",
+      "system": "System",
+      "tools": "Tools"
+    },
+    "quantity": {
+      "ariaLabel": "Quantity selector",
+      "decrease": "Decrease quantity",
+      "increase": "Increase quantity"
+    },
+    "units": {
+      "amp": "A",
+      "cm": "cm",
+      "kw": "kW",
+      "m": "m",
+      "m2": "m²",
+      "m3": "m³",
+      "w": "W",
+      "wm2": "W/m²"
+    }
+  },
+  "compare": {
+    "actions": {
+      "clear": "Clear comparison",
+      "compare": "Compare",
+      "inCompare": "In comparison"
+    },
+    "breadcrumb": "Compare",
+    "empty": "Choose products with the Compare button and the parameter and price comparison will appear here.",
+    "parameters": {
+      "name": "Parameter",
+      "title": "Parameters"
+    },
+    "title": "Product comparison"
+  },
+  "contacts": {
+    "audience": {
+      "text": "For installers, businesses, engineers, project tasks and private customers who need clear technical product selection.",
+      "title": "Who the site is for"
+    },
+    "breadcrumb": "Contacts",
+    "caption": "Contacts",
+    "cards": {
+      "address": {
+        "hint": "pickup and consultation by agreement",
+        "title": "Address"
+      },
+      "messenger": {
+        "hint": "send SKU, photo or task",
+        "title": "Telegram / WhatsApp"
+      },
+      "phone": {
+        "hint": "for orders and selection",
+        "title": "Phone"
+      }
+    },
+    "delivery": {
+      "text": "Pickup and delivery are available by agreement. Project and installation orders can be bundled and reserved separately.",
+      "title": "Delivery and pickup"
+    },
+    "description": "Send an article, photo, task or item list. A manager will confirm price, availability, lead time and help find an analogue.",
+    "order": {
+      "steps": {
+        "confirm": "2. We confirm availability, price and lead time.",
+        "finish": "3. After approval we arrange the order and delivery.",
+        "send": "1. Send SKU, link, photo or task."
+      },
+      "title": "How to order"
+    },
+    "requestContext": {
+      "brand": "Brand",
+      "intent": "Request",
+      "product": "Product",
+      "title": "Request context"
+    },
+    "title": "Contact, price request and equipment selection"
+  },
+  "docs": {
+    "actions": {
+      "openPdf": "Open PDF",
+      "openSearch": "Open search",
+      "toProduct": "To product"
+    },
+    "breadcrumb": "Documentation",
+    "caption": "Documentation",
+    "description": "Find a document by SKU, product, brand or category. You can open the product card from the document.",
+    "empty": "No documents found. Try SKU, brand, document type or open the product through search.",
+    "filters": {
+      "allBrands": "All brands",
+      "allCategories": "All categories"
+    },
+    "title": "Technical PDFs, manuals and datasheets"
+  },
+  "placeholder": {
+    "intent": {
+      "eta": "Lead-time request",
+      "price": "Price request",
+      "priceEta": "Price and lead-time request"
+    },
+    "managerHint": "Send this article to the manager to quickly confirm price, lead time and the next sale step after approval.",
+    "preparedRequest": "Prepared request",
+    "promotions": {
+      "text": "Promotions, new items and priority OhmX.am storefront offers will appear here. For now this section works as a placeholder without a 404.",
+      "title": "Promotions"
+    }
+  },
+  "profile": {
+    "actions": {
+      "savePreferences": "Save preferences",
+      "saveProfile": "Save profile"
+    },
+    "aiMemory": {
+      "activity": "Activity",
+      "activityStats": "{{views}} views · {{favorites}} favorites · {{pins}} pins",
+      "contextDocument": "Context document",
+      "selectionStats": "{{selections}} saved scenarios · {{calculations}} calculations",
+      "selectionsAndCalculations": "Selections and calculations",
+      "willBeCreated": "Created after the first save / selection"
+    },
+    "breadcrumb": "Account",
+    "budget": {
+      "economy": "Economy",
+      "optimal": "Optimal",
+      "premium": "Premium",
+      "unknown": "Not set"
+    },
+    "description": "Profile, history, requests and AI engineer memory for personal selection.",
+    "directions": {
+      "cooling": "Cooling",
+      "electrical": "Electrical",
+      "floor_heating": "Warm floor",
+      "heating": "Heating",
+      "unknown": "Not set"
+    },
+    "facts": {
+      "aiBudget": "AI budget",
+      "aiHistory": "AI history",
+      "clientType": "Client type",
+      "disabled": "Disabled",
+      "enabled": "Enabled",
+      "lastSelection": "Last selection"
+    },
+    "lists": {
+      "favorites": "Favorites",
+      "historyTools": "History and tools",
+      "pinned": "Pinned",
+      "toolPrefix": "Tool"
+    },
+    "placeholders": {
+      "aiNotes": "Example: suggest the optimal option, account for installation on an old site, do not show exact stock."
+    },
+    "preferences": {
+      "budget": "Default budget",
+      "rememberHistoryText": "Dialogs, calculations, latest directions and preferences are saved in the local profile.",
+      "rememberHistoryTitle": "Remember AI selection history."
+    },
+    "projectTypes": {
+      "apartment": "Apartment",
+      "house": "Private house",
+      "installation": "Installation site",
+      "office": "Office / commercial",
+      "service": "Service and repair"
+    },
+    "roles": {
+      "consumer": {
+        "text": "Focus on fast purchases, cart and simple recommendations."
+      },
+      "installer": {
+        "text": "Show professional workflows, projects and specializations."
+      }
+    },
+    "sections": {
+      "aiMemory": {
+        "caption": "AI memory",
+        "title": "What AI knows about the customer"
+      },
+      "personalization": {
+        "caption": "Personalization",
+        "description": "These settings are passed to the AI engineer so every selection does not start from scratch.",
+        "title": "Recommendation preferences"
+      },
+      "profileData": {
+        "caption": "Profile data",
+        "title": "Contacts and role"
+      }
+    },
+    "specializations": {
+      "automation": "Automation and control",
+      "cable": "Cable, cable ducts and installation",
+      "electricHeating": "Electric heating / warm floors",
+      "electrical": "Electrical and panel equipment",
+      "hvac": "HVAC / air conditioning / ventilation",
+      "lighting": "Lighting",
+      "other": "Other",
+      "pumps": "Pumps, water supply and hydraulics",
+      "service": "Service and spare parts",
+      "switches": "Sockets, switches and wiring devices",
+      "ups": "UPS / stabilizers / backup power",
+      "waterHeating": "Hydronic heating and boiler room"
+    },
+    "title": "Account"
+  },
+  "status": {
+    "actions": {
+      "catalog": "Open catalog",
+      "home": "Go home"
+    },
+    "forbidden": {
+      "description": "You do not have access to this page.",
+      "title": "Access forbidden"
+    },
+    "notFound": {
+      "description": "Check the address or open the catalog.",
+      "title": "Page not found"
+    },
+    "serverError": {
+      "description": "The server could not process the request.",
+      "title": "Server error"
+    }
+  },
+  "stock": {
+    "title": "Warehouse availability"
+  },
+  "tools": {
+    "breadcrumb": "Tools",
+    "card": {
+      "pin": "Pin tool",
+      "unpin": "Unpin tool"
+    },
+    "description": "Fast engineering workflows for field tasks: calculation, selection and product navigation without noise.",
+    "items": {
+      "ai-engineering-selector": {
+        "cta": "Open AI selector",
+        "description": "Select heating, cooling, warm floor, boilers, convectors and accessories through an AI dialog.",
+        "name": "AI engineering equipment selection"
+      },
+      "power-calculator": {
+        "cta": "Open calculator",
+        "description": "Preliminary required power calculation in kW and selection of real OhmX.am products by availability.",
+        "name": "Cooling/heating power calculator"
+      },
+      "warm-floor": {
+        "cta": "Open calculator",
+        "description": "Calculate cables, mats, mounting tape, thermostats and accessories.",
+        "name": "Electric warm floor selection"
+      },
+      "warm-floor-project": {
+        "cta": "Open project calculator",
+        "description": "Multi-room project: engineering calc, equipment selection, per-room specification, procurement BOM and estimate.",
+        "name": "Warm floor project"
+      },
+      "building-project": {
+        "cta": "Open building project",
+        "description": "Apartment, house or commercial object: rooms, parameters, confirmed building model.",
+        "name": "Building engineering project"
+      }
+    },
+    "title": "Tools"
+  }
+}

@@ -1,0 +1,1390 @@
+{
+ "exportedAt": "2026-10-13T12:25:00Z",
+ "sha256": "80795400af16852c21180b57091b15b7856056feb54110376f31bc5402813eac",
+ "snapshotId": "ohmx.fan-coil-hydraulics",
+ "source": "engineering_value (FAN_COIL profiles, value_status KNOWN), read-only DB copy",
+ "units": {
+  "20051794": {
+   "connection_size": "3/4\" gas",
+   "cooling_7_12": {
+    "capacity_kw": 2.4,
+    "dp_kpa": 11.1,
+    "flow_m3h": 0.413
+   },
+   "drain_connection_mm": 16.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "20051795": {
+   "connection_size": "3/4\" gas",
+   "cooling_7_12": {
+    "capacity_kw": 4.0,
+    "dp_kpa": 11.0,
+    "flow_m3h": 0.688
+   },
+   "drain_connection_mm": 16.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "20051796": {
+   "connection_size": "3/4\" gas",
+   "cooling_7_12": {
+    "capacity_kw": 4.7,
+    "dp_kpa": 14.7,
+    "flow_m3h": 0.808
+   },
+   "drain_connection_mm": 16.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "20051797": {
+   "connection_size": "1\" gas",
+   "cooling_7_12": {
+    "capacity_kw": 6.3,
+    "dp_kpa": 23.3,
+    "flow_m3h": 1.084
+   },
+   "drain_connection_mm": 16.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "20051798": {
+   "connection_size": "1\" gas",
+   "cooling_7_12": {
+    "capacity_kw": 7.2,
+    "dp_kpa": 11.6,
+    "flow_m3h": 1.238
+   },
+   "drain_connection_mm": 16.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "20051799": {
+   "connection_size": "1\" gas",
+   "cooling_7_12": {
+    "capacity_kw": 9.6,
+    "dp_kpa": 19.8,
+    "flow_m3h": 1.651
+   },
+   "drain_connection_mm": 16.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "20069349": {
+   "connection_size": "3/4\" eurokonus",
+   "cooling_7_12": {
+    "capacity_kw": 1.095,
+    "dp_kpa": 8.3,
+    "flow_m3h": 0.188
+   },
+   "heating_70_60": {
+    "capacity_kw": 2.42,
+    "dp_kpa": 7.5,
+    "flow_m3h": 0.208
+   }
+  },
+  "20069370": {
+   "connection_size": "3/4\" eurokonus",
+   "cooling_7_12": {
+    "capacity_kw": 2.12,
+    "dp_kpa": 9.2,
+    "flow_m3h": 0.365
+   },
+   "heating_70_60": {
+    "capacity_kw": 4.67,
+    "dp_kpa": 8.2,
+    "flow_m3h": 0.402
+   }
+  },
+  "20069371": {
+   "connection_size": "3/4\" eurokonus",
+   "cooling_7_12": {
+    "capacity_kw": 3.31,
+    "dp_kpa": 25.2,
+    "flow_m3h": 0.569
+   },
+   "heating_70_60": {
+    "capacity_kw": 6.635,
+    "dp_kpa": 17.7,
+    "flow_m3h": 0.571
+   }
+  },
+  "20069372": {
+   "connection_size": "3/4\" eurokonus",
+   "cooling_7_12": {
+    "capacity_kw": 3.875,
+    "dp_kpa": 20.1,
+    "flow_m3h": 0.667
+   },
+   "heating_70_60": {
+    "capacity_kw": 7.855,
+    "dp_kpa": 14.8,
+    "flow_m3h": 0.676
+   }
+  },
+  "20069373": {
+   "connection_size": "3/4\" eurokonus",
+   "cooling_7_12": {
+    "capacity_kw": 4.56,
+    "dp_kpa": 27.3,
+    "flow_m3h": 0.784
+   },
+   "heating_70_60": {
+    "capacity_kw": 9.645,
+    "dp_kpa": 21.3,
+    "flow_m3h": 0.829
+   }
+  },
+  "20116244": {
+   "connection_size": "3/4\" eurokonus",
+   "cooling_7_12": {
+    "capacity_kw": 2.12,
+    "dp_kpa": 9.2,
+    "flow_m3h": 0.365
+   },
+   "heating_70_60": {
+    "capacity_kw": 4.67,
+    "dp_kpa": 8.2,
+    "flow_m3h": 0.402
+   }
+  },
+  "20116246": {
+   "connection_size": "3/4\" eurokonus",
+   "cooling_7_12": {
+    "capacity_kw": 3.31,
+    "dp_kpa": 25.2,
+    "flow_m3h": 0.569
+   },
+   "heating_70_60": {
+    "capacity_kw": 6.635,
+    "dp_kpa": 17.7,
+    "flow_m3h": 0.571
+   }
+  },
+  "20116250": {
+   "connection_size": "3/4\" eurokonus",
+   "cooling_7_12": {
+    "capacity_kw": 3.875,
+    "dp_kpa": 20.1,
+    "flow_m3h": 0.667
+   },
+   "heating_70_60": {
+    "capacity_kw": 7.855,
+    "dp_kpa": 14.8,
+    "flow_m3h": 0.676
+   }
+  },
+  "20116252": {
+   "connection_size": "3/4\" eurokonus",
+   "cooling_7_12": {
+    "capacity_kw": 4.56,
+    "dp_kpa": 27.3,
+    "flow_m3h": 0.784
+   },
+   "heating_70_60": {
+    "capacity_kw": 9.645,
+    "dp_kpa": 21.3,
+    "flow_m3h": 0.829
+   }
+  },
+  "20116254": {
+   "connection_size": "3/4\" eurokonus",
+   "cooling_7_12": {
+    "capacity_kw": 1.095,
+    "dp_kpa": 8.3,
+    "flow_m3h": 0.188
+   },
+   "heating_70_60": {
+    "capacity_kw": 2.42,
+    "dp_kpa": 7.5,
+    "flow_m3h": 0.208
+   }
+  },
+  "7510012": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 1.53,
+    "dp_kpa": 4.6,
+    "flow_m3h": 0.263
+   },
+   "drain_connection_mm": 21.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510022": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.1,
+    "dp_kpa": 11.0,
+    "flow_m3h": 0.361
+   },
+   "drain_connection_mm": 21.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510032": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.36,
+    "dp_kpa": 17.0,
+    "flow_m3h": 0.406
+   },
+   "drain_connection_mm": 21.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510042": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.2,
+    "dp_kpa": 27.7,
+    "flow_m3h": 0.55
+   },
+   "drain_connection_mm": 21.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510052": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 4.02,
+    "dp_kpa": 16.7,
+    "flow_m3h": 0.691
+   },
+   "drain_connection_mm": 21.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510062": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 5.03,
+    "dp_kpa": 24.9,
+    "flow_m3h": 0.865
+   },
+   "drain_connection_mm": 21.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510072": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 5.62,
+    "dp_kpa": 28.8,
+    "flow_m3h": 0.967
+   },
+   "drain_connection_mm": 21.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510082": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 7.01,
+    "dp_kpa": 11.2,
+    "flow_m3h": 1.206
+   },
+   "drain_connection_mm": 21.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510212": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 1.53,
+    "dp_kpa": 4.6,
+    "flow_m3h": 0.263
+   },
+   "drain_connection_mm": 21.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510222": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.1,
+    "dp_kpa": 11.0,
+    "flow_m3h": 0.361
+   },
+   "drain_connection_mm": 21.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510242": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.2,
+    "dp_kpa": 27.7,
+    "flow_m3h": 0.55
+   },
+   "drain_connection_mm": 21.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510252": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 4.02,
+    "dp_kpa": 16.7,
+    "flow_m3h": 0.691
+   },
+   "drain_connection_mm": 21.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510512": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 1.53,
+    "dp_kpa": 4.6,
+    "flow_m3h": 0.263
+   },
+   "drain_connection_mm": 20.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510522": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.1,
+    "dp_kpa": 11.0,
+    "flow_m3h": 0.361
+   },
+   "drain_connection_mm": 20.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510532": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.36,
+    "dp_kpa": 17.0,
+    "flow_m3h": 0.406
+   },
+   "drain_connection_mm": 20.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510542": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.2,
+    "dp_kpa": 27.7,
+    "flow_m3h": 0.55
+   },
+   "drain_connection_mm": 20.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510552": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 4.02,
+    "dp_kpa": 16.7,
+    "flow_m3h": 0.691
+   },
+   "drain_connection_mm": 20.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510712": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 1.53,
+    "dp_kpa": 4.6,
+    "flow_m3h": 0.263
+   },
+   "drain_connection_mm": 20.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510722": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.1,
+    "dp_kpa": 11.0,
+    "flow_m3h": 0.361
+   },
+   "drain_connection_mm": 20.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510732": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.36,
+    "dp_kpa": 17.0,
+    "flow_m3h": 0.406
+   },
+   "drain_connection_mm": 20.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510742": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.2,
+    "dp_kpa": 27.7,
+    "flow_m3h": 0.55
+   },
+   "drain_connection_mm": 20.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510752": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 4.02,
+    "dp_kpa": 16.7,
+    "flow_m3h": 0.691
+   },
+   "drain_connection_mm": 20.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510762": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 5.03,
+    "dp_kpa": 24.9,
+    "flow_m3h": 0.865
+   },
+   "drain_connection_mm": 20.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510772": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 5.62,
+    "dp_kpa": 28.8,
+    "flow_m3h": 0.967
+   },
+   "drain_connection_mm": 20.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510782": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 7.01,
+    "dp_kpa": 11.2,
+    "flow_m3h": 1.206
+   },
+   "drain_connection_mm": 20.0,
+   "pipe_configuration": "2-pipe"
+  },
+  "7510933": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.71,
+    "dp_kpa": 16.8,
+    "flow_m3h": 0.466
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7510943": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.53,
+    "dp_kpa": 20.0,
+    "flow_m3h": 0.606
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7510953": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.82,
+    "dp_kpa": 19.5,
+    "flow_m3h": 0.656
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7510963": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 4.48,
+    "dp_kpa": 16.2,
+    "flow_m3h": 0.771
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7510973": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 5.06,
+    "dp_kpa": 16.8,
+    "flow_m3h": 0.87
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511210": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 1.53,
+    "dp_kpa": 4.6,
+    "flow_m3h": 0.263
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511220": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.1,
+    "dp_kpa": 11.0,
+    "flow_m3h": 0.361
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511230": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.36,
+    "dp_kpa": 17.0,
+    "flow_m3h": 0.406
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511233": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.71,
+    "dp_kpa": 16.8,
+    "flow_m3h": 0.466
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511240": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.2,
+    "dp_kpa": 27.7,
+    "flow_m3h": 0.55
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511243": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.53,
+    "dp_kpa": 20.0,
+    "flow_m3h": 0.606
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511250": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 4.02,
+    "dp_kpa": 16.7,
+    "flow_m3h": 0.691
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511253": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.82,
+    "dp_kpa": 19.5,
+    "flow_m3h": 0.656
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511260": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 5.03,
+    "dp_kpa": 24.9,
+    "flow_m3h": 0.865
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511263": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 4.48,
+    "dp_kpa": 16.2,
+    "flow_m3h": 0.771
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511270": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 5.62,
+    "dp_kpa": 28.8,
+    "flow_m3h": 0.967
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511273": {
+   "pipe_configuration": "2-pipe"
+  },
+  "7511280": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 7.01,
+    "dp_kpa": 11.2,
+    "flow_m3h": 1.206
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511310": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 1.53,
+    "dp_kpa": 4.6,
+    "flow_m3h": 0.263
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511320": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.1,
+    "dp_kpa": 11.0,
+    "flow_m3h": 0.361
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511330": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.36,
+    "dp_kpa": 17.0,
+    "flow_m3h": 0.406
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511340": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.2,
+    "dp_kpa": 27.7,
+    "flow_m3h": 0.55
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511350": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 4.02,
+    "dp_kpa": 16.7,
+    "flow_m3h": 0.691
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511360": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 5.03,
+    "dp_kpa": 24.9,
+    "flow_m3h": 0.865
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511412": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 1.53,
+    "dp_kpa": 4.6,
+    "flow_m3h": 0.263
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511422": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.1,
+    "dp_kpa": 11.0,
+    "flow_m3h": 0.361
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511432": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.36,
+    "dp_kpa": 17.0,
+    "flow_m3h": 0.406
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511442": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.2,
+    "dp_kpa": 27.7,
+    "flow_m3h": 0.55
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511452": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 4.02,
+    "dp_kpa": 16.7,
+    "flow_m3h": 0.691
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511462": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 5.03,
+    "dp_kpa": 24.9,
+    "flow_m3h": 0.865
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511472": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 5.62,
+    "dp_kpa": 28.8,
+    "flow_m3h": 0.967
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "7511482": {
+   "connection_size": "1/2\"",
+   "cooling_7_12": {
+    "capacity_kw": 7.01,
+    "dp_kpa": 11.2,
+    "flow_m3h": 1.206
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80012003": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 1.5,
+    "dp_kpa": 13.1,
+    "flow_m3h": 0.258
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 3.74,
+    "dp_kpa": 15.9,
+    "flow_m3h": 0.322
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80012011": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 1.5,
+    "dp_kpa": 13.1,
+    "flow_m3h": 0.258
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 3.74,
+    "dp_kpa": 15.9,
+    "flow_m3h": 0.322
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80012013": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 1.5,
+    "dp_kpa": 13.1,
+    "flow_m3h": 0.258
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 3.74,
+    "dp_kpa": 15.9,
+    "flow_m3h": 0.322
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80022001": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.0,
+    "dp_kpa": 16.3,
+    "flow_m3h": 0.344
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 4.91,
+    "dp_kpa": 19.2,
+    "flow_m3h": 0.423
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80022003": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.0,
+    "dp_kpa": 16.3,
+    "flow_m3h": 0.344
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 4.91,
+    "dp_kpa": 19.2,
+    "flow_m3h": 0.423
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80022011": {
+   "connection_size": "1/2 inch F",
+   "cooling_7_12": {
+    "capacity_kw": 2.0,
+    "dp_kpa": 16.3,
+    "flow_m3h": 0.344
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 4.91,
+    "dp_kpa": 19.2,
+    "flow_m3h": 0.423
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80022013": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.0,
+    "dp_kpa": 16.3,
+    "flow_m3h": 0.344
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 4.91,
+    "dp_kpa": 19.2,
+    "flow_m3h": 0.423
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80022041": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.0,
+    "dp_kpa": 16.3,
+    "flow_m3h": 0.344
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 4.91,
+    "dp_kpa": 19.2,
+    "flow_m3h": 0.423
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80032001": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.53,
+    "dp_kpa": 18.5,
+    "flow_m3h": 0.436
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 5.98,
+    "dp_kpa": 20.1,
+    "flow_m3h": 0.515
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80032003": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.53,
+    "dp_kpa": 18.5,
+    "flow_m3h": 0.436
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 5.98,
+    "dp_kpa": 20.1,
+    "flow_m3h": 0.515
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80032011": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.53,
+    "dp_kpa": 18.5,
+    "flow_m3h": 0.436
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 5.98,
+    "dp_kpa": 20.1,
+    "flow_m3h": 0.515
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80032013": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 2.53,
+    "dp_kpa": 18.5,
+    "flow_m3h": 0.436
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 5.98,
+    "dp_kpa": 20.1,
+    "flow_m3h": 0.515
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80042001": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.02,
+    "dp_kpa": 20.8,
+    "flow_m3h": 0.52
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 6.71,
+    "dp_kpa": 20.0,
+    "flow_m3h": 0.578
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80042003": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.02,
+    "dp_kpa": 20.8,
+    "flow_m3h": 0.52
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 6.71,
+    "dp_kpa": 20.0,
+    "flow_m3h": 0.578
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80042011": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.02,
+    "dp_kpa": 20.8,
+    "flow_m3h": 0.52
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 6.71,
+    "dp_kpa": 20.0,
+    "flow_m3h": 0.578
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80042013": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.02,
+    "dp_kpa": 20.8,
+    "flow_m3h": 0.52
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 6.71,
+    "dp_kpa": 20.0,
+    "flow_m3h": 0.578
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80052001": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.75,
+    "dp_kpa": 22.6,
+    "flow_m3h": 0.645
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 8.16,
+    "dp_kpa": 20.9,
+    "flow_m3h": 0.702
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80052003": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.75,
+    "dp_kpa": 22.6,
+    "flow_m3h": 0.645
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 8.16,
+    "dp_kpa": 20.9,
+    "flow_m3h": 0.702
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80052011": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.75,
+    "dp_kpa": 22.6,
+    "flow_m3h": 0.645
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 8.16,
+    "dp_kpa": 20.9,
+    "flow_m3h": 0.702
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80052013": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 3.75,
+    "dp_kpa": 22.6,
+    "flow_m3h": 0.645
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 8.16,
+    "dp_kpa": 20.9,
+    "flow_m3h": 0.702
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80062001": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 4.25,
+    "dp_kpa": 24.1,
+    "flow_m3h": 0.731
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 9.44,
+    "dp_kpa": 23.2,
+    "flow_m3h": 0.812
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80062003": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 4.25,
+    "dp_kpa": 24.1,
+    "flow_m3h": 0.731
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 9.44,
+    "dp_kpa": 23.2,
+    "flow_m3h": 0.812
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80062011": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 4.25,
+    "dp_kpa": 24.1,
+    "flow_m3h": 0.731
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 9.44,
+    "dp_kpa": 23.2,
+    "flow_m3h": 0.812
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80062013": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 4.25,
+    "dp_kpa": 24.1,
+    "flow_m3h": 0.731
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 9.44,
+    "dp_kpa": 23.2,
+    "flow_m3h": 0.812
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80072001": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 5.52,
+    "dp_kpa": 24.5,
+    "flow_m3h": 0.95
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 12.0,
+    "dp_kpa": 22.6,
+    "flow_m3h": 1.032
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80072003": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 5.52,
+    "dp_kpa": 24.5,
+    "flow_m3h": 0.95
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 12.0,
+    "dp_kpa": 22.6,
+    "flow_m3h": 1.032
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80072011": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 5.52,
+    "dp_kpa": 24.5,
+    "flow_m3h": 0.95
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 12.0,
+    "dp_kpa": 22.6,
+    "flow_m3h": 1.032
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80072013": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 5.52,
+    "dp_kpa": 24.5,
+    "flow_m3h": 0.95
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 12.0,
+    "dp_kpa": 22.6,
+    "flow_m3h": 1.032
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80072041": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 5.52,
+    "dp_kpa": 24.5,
+    "flow_m3h": 0.95
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 12.0,
+    "dp_kpa": 22.6,
+    "flow_m3h": 1.032
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80082001": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 6.42,
+    "dp_kpa": 27.1,
+    "flow_m3h": 1.105
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 13.3,
+    "dp_kpa": 22.7,
+    "flow_m3h": 1.144
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80082003": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 6.42,
+    "dp_kpa": 27.1,
+    "flow_m3h": 1.105
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 13.3,
+    "dp_kpa": 22.7,
+    "flow_m3h": 1.144
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80082011": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 6.42,
+    "dp_kpa": 27.1,
+    "flow_m3h": 1.105
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 13.3,
+    "dp_kpa": 22.7,
+    "flow_m3h": 1.144
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80082013": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 6.42,
+    "dp_kpa": 27.1,
+    "flow_m3h": 1.105
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 13.3,
+    "dp_kpa": 22.7,
+    "flow_m3h": 1.144
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80082041": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 6.42,
+    "dp_kpa": 27.1,
+    "flow_m3h": 1.105
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 13.3,
+    "dp_kpa": 22.7,
+    "flow_m3h": 1.144
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80092001": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 7.53,
+    "dp_kpa": 28.8,
+    "flow_m3h": 1.296
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 15.5,
+    "dp_kpa": 23.8,
+    "flow_m3h": 1.333
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80092003": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 7.53,
+    "dp_kpa": 28.8,
+    "flow_m3h": 1.296
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 15.5,
+    "dp_kpa": 23.8,
+    "flow_m3h": 1.333
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80092011": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 7.53,
+    "dp_kpa": 28.8,
+    "flow_m3h": 1.296
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 15.5,
+    "dp_kpa": 23.8,
+    "flow_m3h": 1.333
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80092013": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 7.53,
+    "dp_kpa": 28.8,
+    "flow_m3h": 1.296
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 15.5,
+    "dp_kpa": 23.8,
+    "flow_m3h": 1.333
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80092041": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 7.53,
+    "dp_kpa": 28.8,
+    "flow_m3h": 1.296
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 15.5,
+    "dp_kpa": 23.8,
+    "flow_m3h": 1.333
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80102001": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 9.02,
+    "dp_kpa": 29.2,
+    "flow_m3h": 1.552
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 18.1,
+    "dp_kpa": 22.9,
+    "flow_m3h": 1.557
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80102003": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 9.02,
+    "dp_kpa": 29.2,
+    "flow_m3h": 1.552
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 18.1,
+    "dp_kpa": 22.9,
+    "flow_m3h": 1.557
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80102011": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 9.02,
+    "dp_kpa": 29.2,
+    "flow_m3h": 1.552
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 18.1,
+    "dp_kpa": 22.9,
+    "flow_m3h": 1.557
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80102013": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 9.02,
+    "dp_kpa": 29.2,
+    "flow_m3h": 1.552
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 18.1,
+    "dp_kpa": 22.9,
+    "flow_m3h": 1.557
+   },
+   "pipe_configuration": "2-pipe"
+  },
+  "80102041": {
+   "connection_size": "1/2\" F",
+   "cooling_7_12": {
+    "capacity_kw": 9.02,
+    "dp_kpa": 29.2,
+    "flow_m3h": 1.552
+   },
+   "drain_connection_mm": 20.0,
+   "heating_70_60": {
+    "capacity_kw": 18.1,
+    "dp_kpa": 22.9,
+    "flow_m3h": 1.557
+   },
+   "pipe_configuration": "2-pipe"
+  }
+ }
+}

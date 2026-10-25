@@ -1,0 +1,428 @@
+{
+  "datasetId": "ohmx-solar-irradiance",
+  "datasetVersion": "1.0.0",
+  "source": "PVGIS (EU JRC) — PVGIS-SARAH3 radiation + ERA5 meteorology",
+  "raddatabase": "PVGIS-SARAH3",
+  "meteodatabase": "ERA5",
+  "yearRange": "2005-2023",
+  "method": "TMY hourly global irradiance, isotropic (Liu-Jordan) transposition to vertical (tilt 90), per-orientation design-season peak",
+  "peakMethod": "max hourly global irradiance on the vertical orientation over June-August (design cooling season)",
+  "transposition": "isotropic sky: G_vert = DNI*cos(theta_i) + DHI*0.5 + GHI*albedo*0.5; albedo=0.2; vertical tilt=90",
+  "latitudeSource": "OpenStreetMap Nominatim (locality centroid; documented approximation, <1% irradiance effect)",
+  "orientationConvention": "azimuth from North, clockwise: N=0, NE=45, E=90, SE=135, S=180, SW=225, W=270, NW=315",
+  "generatedAt": "2026-08-18T14:29:55.271101Z",
+  "assumptions": [
+    "Locality centroid coordinates are used for each station (the meteo station's exact plot is not geocoded); latitude error <0.1 deg => <1% irradiance effect.",
+    "yerevan-agro and yerevan-arabkir share Yerevan centroid coordinates (same PVGIS grid cell); their elevation difference is carried by the separate climate temperature dataset.",
+    "Isotropic sky model ignores horizon brightening/circumsolar; acceptable for a vertical design-peak table (APPROVED_WITH_LIMITATION).",
+    "Design peak is the June-August maximum of the TMY hourly global irradiance; conservative clear-sky envelope, not a monthly average."
+  ],
+  "locations": {
+    "amasia": {
+      "latitude": 40.95731,
+      "longitude": 43.78561,
+      "values": {
+        "N": 308.0,
+        "NE": 627.0,
+        "E": 779.6,
+        "SE": 749.8,
+        "S": 613.5,
+        "SW": 675.6,
+        "W": 753.1,
+        "NW": 594.7
+      }
+    },
+    "ashtarak": {
+      "latitude": 40.28868,
+      "longitude": 44.36131,
+      "values": {
+        "N": 304.7,
+        "NE": 600.4,
+        "E": 754.2,
+        "SE": 690.6,
+        "S": 599.8,
+        "SW": 633.9,
+        "W": 713.9,
+        "NW": 569.2
+      }
+    },
+    "aparan": {
+      "latitude": 40.59084,
+      "longitude": 44.35708,
+      "values": {
+        "N": 314.4,
+        "NE": 647.3,
+        "E": 790.0,
+        "SE": 700.2,
+        "S": 620.5,
+        "SW": 676.1,
+        "W": 745.7,
+        "NW": 584.7
+      }
+    },
+    "ararat": {
+      "latitude": 39.85533,
+      "longitude": 44.69438,
+      "values": {
+        "N": 302.3,
+        "NE": 629.4,
+        "E": 754.1,
+        "SE": 676.5,
+        "S": 591.8,
+        "SW": 619.8,
+        "W": 706.6,
+        "NW": 562.8
+      }
+    },
+    "artik": {
+      "latitude": 40.61984,
+      "longitude": 43.97079,
+      "values": {
+        "N": 312.6,
+        "NE": 634.3,
+        "E": 780.3,
+        "SE": 665.2,
+        "S": 596.7,
+        "SW": 684.1,
+        "W": 721.5,
+        "NW": 581.5
+      }
+    },
+    "armavir": {
+      "latitude": 40.15555,
+      "longitude": 44.03876,
+      "values": {
+        "N": 303.7,
+        "NE": 607.3,
+        "E": 749.1,
+        "SE": 700.0,
+        "S": 607.1,
+        "SW": 653.4,
+        "W": 752.7,
+        "NW": 563.7
+      }
+    },
+    "artashat": {
+      "latitude": 39.95666,
+      "longitude": 44.5471,
+      "values": {
+        "N": 304.9,
+        "NE": 593.6,
+        "E": 772.9,
+        "SE": 705.6,
+        "S": 606.6,
+        "SW": 660.9,
+        "W": 712.0,
+        "NW": 544.9
+      }
+    },
+    "gavar": {
+      "latitude": 40.3514,
+      "longitude": 45.12732,
+      "values": {
+        "N": 308.3,
+        "NE": 608.2,
+        "E": 752.8,
+        "SE": 744.4,
+        "S": 633.5,
+        "SW": 726.0,
+        "W": 737.4,
+        "NW": 557.9
+      }
+    },
+    "gyumri": {
+      "latitude": 40.78521,
+      "longitude": 43.84161,
+      "values": {
+        "N": 302.8,
+        "NE": 635.5,
+        "E": 779.7,
+        "SE": 696.7,
+        "S": 613.4,
+        "SW": 643.4,
+        "W": 741.1,
+        "NW": 577.2
+      }
+    },
+    "goris": {
+      "latitude": 39.50524,
+      "longitude": 46.34423,
+      "values": {
+        "N": 312.0,
+        "NE": 622.5,
+        "E": 767.5,
+        "SE": 717.7,
+        "S": 611.8,
+        "SW": 673.9,
+        "W": 697.1,
+        "NW": 552.6
+      }
+    },
+    "dilijan": {
+      "latitude": 40.74171,
+      "longitude": 44.87222,
+      "values": {
+        "N": 309.1,
+        "NE": 586.2,
+        "E": 749.8,
+        "SE": 689.8,
+        "S": 618.0,
+        "SW": 671.2,
+        "W": 744.7,
+        "NW": 570.5
+      }
+    },
+    "yeghvard": {
+      "latitude": 40.3214,
+      "longitude": 44.48139,
+      "values": {
+        "N": 296.7,
+        "NE": 583.1,
+        "E": 780.7,
+        "SE": 755.8,
+        "S": 639.6,
+        "SW": 686.3,
+        "W": 715.0,
+        "NW": 566.1
+      }
+    },
+    "yerevan-agro": {
+      "latitude": 40.17771,
+      "longitude": 44.51262,
+      "values": {
+        "N": 304.5,
+        "NE": 635.2,
+        "E": 787.3,
+        "SE": 690.3,
+        "S": 599.1,
+        "SW": 634.3,
+        "W": 731.3,
+        "NW": 572.7
+      }
+    },
+    "yerevan-arabkir": {
+      "latitude": 40.17771,
+      "longitude": 44.51262,
+      "values": {
+        "N": 304.5,
+        "NE": 635.2,
+        "E": 787.3,
+        "SE": 690.3,
+        "S": 599.1,
+        "SW": 634.3,
+        "W": 731.3,
+        "NW": 572.7
+      }
+    },
+    "talin": {
+      "latitude": 40.38371,
+      "longitude": 43.8736,
+      "values": {
+        "N": 309.0,
+        "NE": 622.3,
+        "E": 765.1,
+        "SE": 697.3,
+        "S": 605.1,
+        "SW": 665.6,
+        "W": 758.7,
+        "NW": 567.6
+      }
+    },
+    "ijevan": {
+      "latitude": 40.87799,
+      "longitude": 45.14375,
+      "values": {
+        "N": 301.9,
+        "NE": 571.2,
+        "E": 747.3,
+        "SE": 709.4,
+        "S": 604.1,
+        "SW": 706.8,
+        "W": 720.8,
+        "NW": 543.2
+      }
+    },
+    "tsaghkahovit": {
+      "latitude": 40.63888,
+      "longitude": 44.22255,
+      "values": {
+        "N": 312.4,
+        "NE": 636.8,
+        "E": 761.7,
+        "SE": 746.0,
+        "S": 649.2,
+        "SW": 686.9,
+        "W": 725.7,
+        "NW": 576.6
+      }
+    },
+    "kapan": {
+      "latitude": 39.20757,
+      "longitude": 46.40493,
+      "values": {
+        "N": 308.3,
+        "NE": 625.7,
+        "E": 787.6,
+        "SE": 699.0,
+        "S": 608.0,
+        "SW": 661.1,
+        "W": 716.7,
+        "NW": 549.9
+      }
+    },
+    "hrazdan": {
+      "latitude": 40.51969,
+      "longitude": 44.75007,
+      "values": {
+        "N": 311.8,
+        "NE": 629.1,
+        "E": 773.6,
+        "SE": 713.6,
+        "S": 616.5,
+        "SW": 667.8,
+        "W": 726.5,
+        "NW": 569.1
+      }
+    },
+    "martuni": {
+      "latitude": 40.13905,
+      "longitude": 45.30547,
+      "values": {
+        "N": 311.1,
+        "NE": 621.0,
+        "E": 777.9,
+        "SE": 744.3,
+        "S": 633.2,
+        "SW": 687.7,
+        "W": 762.8,
+        "NW": 572.7
+      }
+    },
+    "meghri": {
+      "latitude": 38.9013,
+      "longitude": 46.24591,
+      "values": {
+        "N": 304.9,
+        "NE": 631.9,
+        "E": 769.9,
+        "SE": 693.1,
+        "S": 601.4,
+        "SW": 655.6,
+        "W": 717.5,
+        "NW": 564.5
+      }
+    },
+    "jermuk": {
+      "latitude": 39.83882,
+      "longitude": 45.67126,
+      "values": {
+        "N": 311.8,
+        "NE": 611.1,
+        "E": 754.8,
+        "SE": 722.7,
+        "S": 624.4,
+        "SW": 705.9,
+        "W": 738.1,
+        "NW": 570.4
+      }
+    },
+    "sevan": {
+      "latitude": 40.54852,
+      "longitude": 44.95724,
+      "values": {
+        "N": 302.7,
+        "NE": 605.2,
+        "E": 786.2,
+        "SE": 740.2,
+        "S": 641.4,
+        "SW": 722.0,
+        "W": 739.0,
+        "NW": 553.6
+      }
+    },
+    "sisian": {
+      "latitude": 39.52354,
+      "longitude": 46.02358,
+      "values": {
+        "N": 310.9,
+        "NE": 625.1,
+        "E": 773.1,
+        "SE": 772.3,
+        "S": 643.3,
+        "SW": 703.3,
+        "W": 713.3,
+        "NW": 566.9
+      }
+    },
+    "stepanavan": {
+      "latitude": 41.0112,
+      "longitude": 44.38451,
+      "values": {
+        "N": 305.7,
+        "NE": 612.8,
+        "E": 766.5,
+        "SE": 693.1,
+        "S": 607.8,
+        "SW": 669.7,
+        "W": 747.0,
+        "NW": 559.7
+      }
+    },
+    "vanadzor": {
+      "latitude": 40.81124,
+      "longitude": 44.48518,
+      "values": {
+        "N": 311.3,
+        "NE": 598.6,
+        "E": 763.7,
+        "SE": 706.2,
+        "S": 612.8,
+        "SW": 664.0,
+        "W": 727.3,
+        "NW": 577.9
+      }
+    },
+    "tashir": {
+      "latitude": 41.12136,
+      "longitude": 44.28417,
+      "values": {
+        "N": 308.0,
+        "NE": 615.4,
+        "E": 753.8,
+        "SE": 706.4,
+        "S": 627.9,
+        "SW": 685.1,
+        "W": 717.4,
+        "NW": 536.2
+      }
+    },
+    "kajaran": {
+      "latitude": 39.15101,
+      "longitude": 46.1554,
+      "values": {
+        "N": 308.9,
+        "NE": 621.4,
+        "E": 775.3,
+        "SE": 715.0,
+        "S": 618.9,
+        "SW": 684.0,
+        "W": 731.6,
+        "NW": 563.9
+      }
+    },
+    "fantan": {
+      "latitude": 40.39282,
+      "longitude": 44.68399,
+      "values": {
+        "N": 307.1,
+        "NE": 609.2,
+        "E": 746.1,
+        "SE": 700.3,
+        "S": 624.2,
+        "SW": 668.2,
+        "W": 699.6,
+        "NW": 545.4
+      }
+    }
+  }
+}

@@ -1,85 +1,99 @@
-# OhmX.am — Project Context and Operating Instructions
+# OhmX.am
 
-Updated: 2026-10-14
+OhmX.am is an engineering-oriented online catalog for electrical, HVAC, heating, plumbing, controls and
+automation equipment in the Armenian market. Besides a retail catalog it contains engineering tools:
+load and equipment-selection calculators, a warm-floor designer and bill-of-materials (BOM) generation
+that resolve requirements to real catalog items.
 
-## 1. Project mission
-OhmX.am is an engineering-oriented e-commerce platform for electrical, HVAC, heating, plumbing, controls, and automation equipment in the Armenian market. It should combine accurate product data, an understandable retail experience, engineering calculations, equipment selection, compatibility checks, and comprehensive bills of materials (BOMs).
+This repository is a source snapshot of the website plus an export of its public product catalog. It is
+prepared so that the code and the catalog can be browsed and indexed together.
 
-Operate as an experienced software architect, full-stack engineer, QA engineer, and engineering-domain analyst. Prefer practical, testable, low-risk changes that build upon the existing application instead of speculative rewrites.
+## Repository layout
 
-## 2. Known environment (historical snapshot — verify before using)
-- Primary local workspace: `/data/projects/OhmX.am`.
-- Monorepo with `client/` and `server/` directories.
-- Client: React/Vite-based application; previously served at `127.0.0.1:5173` during development.
-- Server: Node-based API; previously available at `127.0.0.1:8081` with `/api/health`.
-- Administration interface: `/admin`.
-- SQLite database: `data/electro.db`.
-- Approximate historical scale: 5,300+ products, ~130 categories, ~45 brands, ~7,000 product images, ~35,800 product features, multiple warehouses. These are NOT live counts: inspect the current database in read-only mode for current facts.
-- Existing engineering tools include `/tools/power-calculator`, `/tools/warm-floor`, and `/tools/ai-engineering-selector`.
+| Path | Contents |
+|---|---|
+| `client/` | Frontend: React 18, TypeScript, Vite, Tailwind, zustand, react-router, i18next, pdfmake |
+| `client/src/` | Pages, components, API client, building-project wizard and equipment-selection UI |
+| `client/pwa/` | Static assets copied into the build (PWA manifest and service worker, category art, series images, warm-floor settings) |
+| `client/tests/` | Frontend tests (`node:test` run through `tsx`) |
+| `server/` | Backend: Node.js, Express, SQLite via `better-sqlite3`, TypeScript |
+| `server/src/routes/` | HTTP API: catalog, categories, brands, series, products, search, orders, uploads, documents, tools, building project, warm-floor project, catalog matcher, AI engineering, admin |
+| `server/src/utils/` | Domain logic: building-project loads, hydronics, solar, air and transmission calculations; warm-floor engine; catalog matcher; engineering configurator; hydronic BOM |
+| `server/src/services/` | Catalog search index, full export, engineering selection, product relationships, calculator inference |
+| `server/src/scripts/`, `server/src/cli/` | Maintenance and import tools (these write to a database; see below) |
+| `server/src/data/` | Reference datasets: Armenian building climatology, PVGIS solar irradiance, warm-floor configuration |
+| `server/test-fixtures/` | Schema-only DDL used by tests |
+| `scripts/` | Python helpers for catalog audits and engineering product data, the catalog exporter and verifier, and the test runner |
+| `tests/` | Root-level tests and `known-gaps.json` |
+| `catalog/` | Export of the public product catalog (see below) |
 
-The environment above is context, not permission to access systems or modify them. Verify paths, scripts, schemas, ports, running processes, and dependencies before proceeding.
+## Catalog export
 
-## 3. Current priorities
+`catalog/` is a deterministic snapshot of the catalog database, written by `scripts/export_public_catalog.py`
+and checked by `scripts/verify_public_catalog_export.py`. It holds one JSON Lines file per table in `catalog/data/`
+(UTF-8, original column names and identifiers, sorted by primary key), the referenced images and documents under
+`catalog/storage/` at the same relative paths as the site URLs, and manifests with record counts and SHA-256
+checksums (`manifest.json`, `asset-manifest.tsv`, `extra-assets-manifest.tsv`). See `catalog/README.md` for the
+table joins and scope rules.
 
-### A. Engineering equipment selection and comprehensive BOM
-- Build a deterministic and traceable workflow that converts customer input into a realistic system specification.
-- Support the current calculator and system-selection workflows, including fan coils, heating/cooling circuits, manifolds, circulation pumps, and installation accessories.
-- For fan-coil configurations, evaluate manifolds compatible with the selected control scheme and Danfoss electric actuators, where appropriate; do not assume universal compatibility.
-- Calculate the number of circuits/ports using actual loads and connection requirements, and select pumps using verified hydraulic parameters (required flow, head loss, operating point, temperature/fluid properties, and manufacturer pump curves).
-- Include required accessories such as connection fittings, valves, plugs, air vents, drain/fill assemblies, and other commissioning essentials.
-- Prioritize real, active items in the OhmX catalog and use verified product IDs/SKUs, names, specifications, and current prices only.
-- When a required component is not found, include its clear generic name with a visible `NOT_IN_CATALOG` marker; do not invent a catalog code, price, stock status, or substitute.
-- Differentiate engineering calculations, preliminary estimates, assumptions, and items needing manual verification.
-- Show end users a clear, deduplicated, grouped, quantity-aware BOM with reasons for equipment selection and compatibility warnings.
+The export covers products (including inactive ones, with their status), brands, categories, series, product
+features and attributes, images, approved product relationships and the engineering specification tables. Orders,
+customer data, accounts and application settings are not part of it, and the database file itself is not included.
 
-### B. Catalog and product relationships
-- Improve product metadata quality, classification, compatibility, accessories, and cross-sell relationships.
-- Some product-relationship candidates have been prepared for human review. Their presence in CSV import packages is NOT approval to import them.
-- A historical review package contained 279 relationship candidates and a separate 134-row family decision draft. Their approval state and counts MUST be rechecked.
-- An unsigned draft must remain unsigned; avoid writing relationship tables or review queues until explicitly approved.
-- Maintain provenance, validation, conflict checks, and rollback options for any eventual data import.
+Product photographs and manufacturer artwork are supplied through official distributor relationships. Their
+redistribution is governed by the applicable agreements; they are not released under an open-source licence.
+This repository currently has no licence file, so no reuse rights are granted by default.
 
-### C. Quality and usability
-- Preserve existing working workflows and calculation behavior unless a proposed change is explicitly approved.
-- Prioritize understandable customer output, accessibility on mobile/tablet, data validation, reliable localization, and responsive performance.
-- Keep business logic deterministic. AI may provide explanations, research, audits, and suggestions, but must not silently invent technical parameters.
+## Development
 
-## 4. Non-negotiable safety and change-management rules
-1. **Read first:** Inspect relevant source files, documentation, current state, and test coverage before implementing changes.
-2. **No production changes without approval:** Do not deploy, publish, restart production services, mutate the live database, execute migrations against production, or overwrite generated/live build assets without explicit authorization.
-3. **Preserve data:** Use read-only SQLite snapshots for analysis and tests whenever practical. Never delete or bulk-update product, order, inventory, or relationship records without a separately approved plan.
-4. **No fabricated engineering data:** Never invent pump curves, dimensions, electrical ratings, pressure losses, valve flow coefficients, product compatibility, SKUs, or prices. Label missing evidence and explain how to validate it.
-5. **Safe implementation:** Make minimal, coherent changes. Prefer isolated tests and backups; show the exact impact of proposed actions.
-6. **No secrets:** Do not print, copy into reports, or commit credentials, access tokens, `.env` files, or customer-sensitive information.
-7. **Review gates:** For risky changes, provide a concise proposed plan and wait for approval. Do not infer permission from a discussion or draft specification.
-8. **Git last:** Perform source inspection, changes, verification, and the final review before any Git commits/pushes; never commit or push without approval.
+Prerequisites: Node.js 24 (the version production runs) and a current npm, plus Python 3 for the helper tests.
+Native modules (`better-sqlite3`, `esbuild`) need their install scripts, so use a normal `npm ci`.
 
-## 5. Engineering implementation principles
-- Inspect the actual schema and product data before creating selection algorithms.
-- Separate customer inputs, derived engineering values, catalog matches, and exceptions in the data model.
-- Express and test units explicitly: W/kW, l/h or m³/h, kPa/bar, mm/inches, V/A, °C.
-- Test edge cases such as missing specifications, no matches, insufficient pump curve data, duplicate accessories, and incompatible fittings.
-- Make BOM item selection explainable and reproducible.
-- Avoid hard-coded catalog IDs or one-off rules that do not generalize.
-- If a given task specifically prohibits rebuilding the server or modifying the DB, comply and implement only feasible changes in the approved client scope; clearly state resulting limitations.
-- Do not claim end-to-end engineering validation when key inputs or manufacturer data are absent.
+```
+npm ci
+npm run dev          # client on 127.0.0.1:5173, server with file watching
+```
 
-## 6. Preferred collaboration style
-- Provide agent task instructions/prompts in **English**; concise explanations to the user may be in **Russian**.
-- Recommend an appropriate model for substantial tasks, considering cost and reliability.
-- Divide large initiatives into small milestones with a clear scope and acceptance criteria to control costs.
-- Report: (a) inspected facts, (b) changes made, (c) tests with results, (d) limitations/risks, (e) next recommended step.
-- Prefer verifiable evidence (specific files, code paths, test results) to optimistic declarations of completion.
-- Avoid unnecessary dependencies, overengineering, and broad refactors.
+The server reads its settings from environment variables (`PORT`, `CLIENT_URL`, `DB_PATH`, `ADMIN_PASSWORD`,
+`ADMIN_TOKEN_SECRET`, optional SMTP settings and `OPENAI_API_KEY`). Admin login stays disabled until both admin
+variables are set. No database is included: point `DB_PATH` at a database of your own. `npm run seed` fills an
+empty one with demo data.
 
-## 7. Initial task for a new project conversation
-1. Inventory the repository and read its README, architecture, database schema, existing calculators, catalog-matching code, product relationships, test scripts, and deployment constraints.
-2. Summarize the current state, distinguishing verified facts from this historical context.
-3. Identify the highest-value next improvement in the engineering calculator -> equipment selection -> BOM flow.
-4. Present a short, risk-ranked action plan with tests and acceptance criteria.
-5. Wait for authorization before making code changes or modifying any data.
+## Tests, type checks and lint
 
-## 8. Documents recommended for additional context
-Attach or point the AI project to current, sanitized copies of: `README.md`, architecture/engineering design notes, calculator/BOM specifications, database schema (`CREATE TABLE` statements or a curated schema document), API contracts, selected tests, and relevant CSV decision rationale files. Do **not** upload real credentials, personal customer data, or the raw production SQLite database by default.
+```
+npm test                 # unit suites: server, client, root node tests, Python
+npm run test:server      # server suites only
+npm run test:client      # client suites only
+npm run test:known-gaps  # tests that are known to fail (see below); exits non-zero while they do
+npm run typecheck        # server and client type checks
+npm run lint             # ESLint 10 flat config (eslint.config.mjs)
+```
 
-This file is an orientation guide. The repository and its current verified state are the source of truth.
+`scripts/run-tests.mjs` runs every suite with a scrubbed environment and a throwaway database path, so tests cannot
+open a real database, read a `.env` file or call external services. Tests that need an outside input are skipped with
+an explicit reason:
+
+- `search.api-regression.test.js` needs `OHMX_SEARCH_BASE_URL` pointing at a disposable running server.
+- Engineering research-package tests need `OHMX_ENGINEERING_RESEARCH_DIR` and `OHMX_ENGINEERING_BASELINE_DB`.
+- Suites that compare against a database snapshot need `DB_PATH` and `OHMX_INFERENCE_TEST_DB` set to copies of one snapshot.
+
+Do not run `db:reset`, `seed`, `import:*`, `apply:*` or the tools in `server/src/scripts/` against a database you want to keep.
+
+## Build
+
+`npm run build` compiles the client (`tsc -b && vite build` into `client/dist`) and the server
+(`tsc -p server/tsconfig.prod.json` into `server/dist`, followed by copying runtime data files).
+`client/dist`, `server/dist`, databases, uploads and `.env` files are generated or private runtime artifacts and are not
+tracked here. The production build compiles an explicit list of server files (`server/tsconfig.prod.json`); some
+source modules, for example the building-project quality and engineering-orchestrator modules, are not part of it.
+
+## Known limitations
+
+- `tests/known-gaps.json` lists the tests that currently fail, with the reason for each. Most check
+  building-project service wiring that is not present in the service source. They are kept visible rather than
+  weakened or skipped.
+- `npm run typecheck` reports 11 type errors in server modules that are outside the production build;
+  the production build itself compiles cleanly.
+- `npm run lint` reports existing findings, mostly `@typescript-eslint/no-explicit-any`. They have not been suppressed.
+- Redistribution rights for manufacturer images are not independently verified here (see above).

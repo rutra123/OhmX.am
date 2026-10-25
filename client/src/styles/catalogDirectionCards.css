@@ -1,0 +1,11 @@
+.catalog-direction-card__favorite {
+  top: auto;
+  right: 1rem;
+  bottom: 1rem;
+  width: 2.15rem;
+  height: 2.15rem;
+}
+
+.catalog-direction-card__cta {
+  padding-right: 3.25rem;
+}

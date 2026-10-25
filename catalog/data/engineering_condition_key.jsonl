@@ -1,0 +1,15 @@
+{"condition_key":"esp_pa","value_type":"NUMERIC","unit":"Pa","description":"External static pressure"}
+{"condition_key":"fan_speed","value_type":"TEXT","unit":null,"description":"Fan speed: LOW / MEDIUM / HIGH / AUTO / target"}
+{"condition_key":"frequency_hz","value_type":"NUMERIC","unit":"Hz","description":"Compressor / drive frequency"}
+{"condition_key":"indoor_air_dry_bulb_c","value_type":"NUMERIC","unit":"°C","description":"Indoor air dry-bulb temperature, as stated by source"}
+{"condition_key":"indoor_air_wet_bulb_c","value_type":"NUMERIC","unit":"°C","description":"Indoor air wet-bulb temperature, as stated by source"}
+{"condition_key":"load_percent","value_type":"NUMERIC","unit":"%","description":"Part-load percentage"}
+{"condition_key":"operating_mode","value_type":"TEXT","unit":null,"description":"heating / cooling / dhw"}
+{"condition_key":"outdoor_air_c","value_type":"NUMERIC","unit":"°C","description":"Outdoor (ambient) air temperature"}
+{"condition_key":"outdoor_air_wet_bulb_c","value_type":"NUMERIC","unit":"°C","description":null}
+{"condition_key":"relative_humidity_pct","value_type":"NUMERIC","unit":"%","description":"Relative humidity — only if EXPLICIT in source (derived RH must be flagged DERIVED)"}
+{"condition_key":"test_standard","value_type":"TEXT","unit":null,"description":"Test standard (e.g. EN 14511, ISO 13256)"}
+{"condition_key":"water_in_c","value_type":"NUMERIC","unit":"°C","description":"Water temperature entering the coil/unit"}
+{"condition_key":"water_out_c","value_type":"NUMERIC","unit":"°C","description":"Water temperature leaving the coil/unit"}
+{"condition_key":"water_return_c","value_type":"NUMERIC","unit":"°C","description":"Water return temperature"}
+{"condition_key":"water_supply_c","value_type":"NUMERIC","unit":"°C","description":"Water supply temperature (source/supply side)"}

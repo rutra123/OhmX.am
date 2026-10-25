@@ -1,0 +1,449 @@
+{
+ "capturedFrom": "GET /api/tools/building-project/systems-catalog (localhost:8081, read-only) 2026-10-14",
+ "systemFamilies": [
+  {
+   "id": "gas_boiler",
+   "label": "Газовый котёл",
+   "service": "heating",
+   "kind": "source",
+   "scope": "central",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Центральный источник тепла для водяного контура.",
+    "Терминалы подбираются отдельно."
+   ]
+  },
+  {
+   "id": "gas_condensing_boiler",
+   "label": "Конденсационный газовый котёл",
+   "service": "heating",
+   "kind": "source",
+   "scope": "central",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Центральный источник тепла для водяного контура.",
+    "Подходит для водяных терминалов и комбинированных схем."
+   ]
+  },
+  {
+   "id": "electric_boiler",
+   "label": "Электрический котёл",
+   "service": "heating",
+   "kind": "source",
+   "scope": "central",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Центральный источник для водяной системы.",
+    "Нужны терминалы отопления."
+   ]
+  },
+  {
+   "id": "heat_pump_air_to_water",
+   "label": "Тепловой насос воздух–вода",
+   "service": "heating",
+   "kind": "source",
+   "scope": "central",
+   "capabilityStatus": "allowed_with_warning",
+   "statusLabel": "Поддерживается с предупреждением",
+   "notes": [
+    "Центральный источник для водяной системы.",
+    "Для полной схемы нужны терминалы и дальнейшая инженерная проверка."
+   ]
+  },
+  {
+   "id": "reversible_air_to_water_heat_pump",
+   "label": "Реверсивный тепловой насос воздух–вода",
+   "service": "heating_and_cooling",
+   "kind": "source",
+   "scope": "central",
+   "capabilityStatus": "allowed_with_warning",
+   "statusLabel": "Поддерживается с предупреждением",
+   "notes": [
+    "Один центральный источник отопления и охлаждения.",
+    "Работает через водяной контур. Модель и мощность выбираются позже."
+   ]
+  },
+  {
+   "id": "electric_convector",
+   "label": "Электрический конвектор",
+   "service": "heating",
+   "kind": "terminal",
+   "scope": "room_local",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Комнатный локальный прибор.",
+    "Подходит для быстрого электрического отопления."
+   ]
+  },
+  {
+   "id": "heating_cable",
+   "label": "Нагревательный кабель",
+   "service": "heating",
+   "kind": "terminal",
+   "scope": "room_local",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Электрический тёплый пол на кабеле.",
+    "Комнатный локальный терминал отопления."
+   ]
+  },
+  {
+   "id": "heating_mat",
+   "label": "Нагревательный мат",
+   "service": "heating",
+   "kind": "terminal",
+   "scope": "room_local",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Электрический тёплый пол на мате.",
+    "Комнатный локальный терминал отопления."
+   ]
+  },
+  {
+   "id": "electric_underfloor_heating",
+   "label": "Электрический тёплый пол",
+   "service": "heating",
+   "kind": "solution_template",
+   "scope": "room_local",
+   "capabilityStatus": "allowed_with_warning",
+   "statusLabel": "Поддерживается с предупреждением",
+   "notes": [
+    "Универсальная электрическая схема локального отопления.",
+    "Нагревательный кабель или мат подбираются дальше."
+   ]
+  },
+  {
+   "id": "hydronic_floor_heating",
+   "label": "Водяной тёплый пол",
+   "service": "heating",
+   "kind": "terminal",
+   "scope": "room_local",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Терминал водяной системы отопления.",
+    "Подходит как один из нескольких терминалов комнаты."
+   ]
+  },
+  {
+   "id": "aluminum_radiators",
+   "label": "Алюминиевые радиаторы",
+   "service": "heating",
+   "kind": "terminal",
+   "scope": "room_local",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Комнатный терминал водяного отопления.",
+    "Допустим как самостоятельный или дополнительный источник тепла."
+   ]
+  },
+  {
+   "id": "bimetal_radiators",
+   "label": "Биметаллические радиаторы",
+   "service": "heating",
+   "kind": "terminal",
+   "scope": "room_local",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Комнатный терминал водяного отопления.",
+    "Подходит для комбинаций с тёплым полом."
+   ]
+  },
+  {
+   "id": "steel_panel_radiators",
+   "label": "Стальные панельные радиаторы",
+   "service": "heating",
+   "kind": "terminal",
+   "scope": "room_local",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Комнатный терминал водяного отопления.",
+    "Хорошо работает в комнатных схемах."
+   ]
+  },
+  {
+   "id": "fan_coils",
+   "label": "Фанкойлы",
+   "service": "heating_and_cooling",
+   "kind": "terminal",
+   "scope": "room_local",
+   "capabilityStatus": "allowed_with_warning",
+   "statusLabel": "Поддерживается с предупреждением",
+   "notes": [
+    "Подходит для водяного отопления и охлаждения.",
+    "Требует дальнейшей инженерной проверки по объекту."
+   ]
+  },
+  {
+   "id": "infloor_convectors",
+   "label": "Внутрипольные конвекторы",
+   "service": "heating",
+   "kind": "terminal",
+   "scope": "room_local",
+   "capabilityStatus": "allowed_with_warning",
+   "statusLabel": "Поддерживается с предупреждением",
+   "notes": [
+    "Комнатный терминал отопления.",
+    "Обычно используется как дополнительный или архитектурный элемент."
+   ]
+  },
+  {
+   "id": "heat_pump_air_to_air",
+   "label": "Тепловой насос воздух–воздух",
+   "service": "heating_and_cooling",
+   "kind": "combined",
+   "scope": "hybrid",
+   "capabilityStatus": "not_yet_verified",
+   "statusLabel": "Расчёт в разработке",
+   "notes": [
+    "Комбинированная схема отопления и охлаждения.",
+    "Расчёт и инженерная проверка в разработке."
+   ]
+  },
+  {
+   "id": "split_wall",
+   "label": "Настенный split",
+   "service": "cooling",
+   "kind": "combined",
+   "scope": "room_local",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Direct expansion система для одной комнаты.",
+    "Подходит как локальное охлаждение."
+   ]
+  },
+  {
+   "id": "multi_split",
+   "label": "Multi-split",
+   "service": "cooling",
+   "kind": "combined",
+   "scope": "central",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Direct expansion система с одним наружным блоком.",
+    "Обслуживает несколько комнат."
+   ]
+  },
+  {
+   "id": "cassette_ac",
+   "label": "Кассетный кондиционер",
+   "service": "cooling",
+   "kind": "combined",
+   "scope": "room_local",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Direct expansion система для помещений с потолочным пространством.",
+    "Хороша для коммерческих и больших комнат."
+   ]
+  },
+  {
+   "id": "ducted_ac",
+   "label": "Канальный кондиционер",
+   "service": "cooling",
+   "kind": "combined",
+   "scope": "central",
+   "capabilityStatus": "allowed_with_warning",
+   "statusLabel": "Поддерживается с предупреждением",
+   "notes": [
+    "Direct expansion система с распределением по каналам.",
+    "Требует дальнейшей инженерной проверки."
+   ]
+  },
+  {
+   "id": "floor_ceiling_ac",
+   "label": "Напольно-потолочный кондиционер",
+   "service": "cooling",
+   "kind": "combined",
+   "scope": "room_local",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Direct expansion система для гибкой установки в комнате.",
+    "Подходит для локального охлаждения."
+   ]
+  },
+  {
+   "id": "column_ac",
+   "label": "Колонный кондиционер",
+   "service": "cooling",
+   "kind": "combined",
+   "scope": "room_local",
+   "capabilityStatus": "allowed_with_warning",
+   "statusLabel": "Поддерживается с предупреждением",
+   "notes": [
+    "Direct expansion система для высоких теплопритоков.",
+    "Требует проверки по помещению."
+   ]
+  },
+  {
+   "id": "vrf_vrv",
+   "label": "VRF / VRV",
+   "service": "cooling",
+   "kind": "combined",
+   "scope": "central",
+   "capabilityStatus": "allowed_with_warning",
+   "statusLabel": "Поддерживается с предупреждением",
+   "notes": [
+    "Многозональная Direct Expansion система.",
+    "Требует инженерной проверки и дальнейшего расчёта."
+   ]
+  },
+  {
+   "id": "chiller_fan_coils",
+   "label": "Чиллер + фанкойлы",
+   "service": "cooling",
+   "kind": "source",
+   "scope": "central",
+   "capabilityStatus": "allowed_with_warning",
+   "statusLabel": "Поддерживается с предупреждением",
+   "notes": [
+    "Hydronic схема охлаждения с центральным источником.",
+    "Фанкойлы назначаются по комнатам отдельно."
+   ]
+  },
+  {
+   "id": "external_building_heating_supply",
+   "label": "Центральное отопление здания",
+   "service": "heating",
+   "kind": "source",
+   "scope": "central",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Источник тепла — центральная система здания (вне квартиры).",
+    "Оборудование источника не подбирается OhmX; подбираются квартирные терминалы и гидравлика."
+   ],
+   "external": true
+  },
+  {
+   "id": "external_building_cooling_supply",
+   "label": "Центральное охлаждение здания",
+   "service": "cooling",
+   "kind": "source",
+   "scope": "central",
+   "capabilityStatus": "allowed",
+   "statusLabel": "Поддерживается",
+   "notes": [
+    "Источник холода — центральная система здания (вне квартиры).",
+    "Оборудование источника не подбирается OhmX; подбираются квартирные терминалы и гидравлика."
+   ],
+   "external": true
+  },
+  {
+   "id": "heat_pump_air_to_water_fan_coils",
+   "label": "Тепловой насос воздух–вода + фанкойлы",
+   "service": "heating_and_cooling",
+   "kind": "solution_template",
+   "scope": "hybrid",
+   "capabilityStatus": "not_yet_verified",
+   "statusLabel": "Расчёт в разработке",
+   "notes": [
+    "Комбинированное водяное отопление/охлаждение.",
+    "Фанкойлы и центральный источник проверяются дальше."
+   ]
+  },
+  {
+   "id": "gas_boiler_split_multi_split",
+   "label": "Газовый котёл + split/multi-split",
+   "service": "heating_and_cooling",
+   "kind": "solution_template",
+   "scope": "hybrid",
+   "capabilityStatus": "not_yet_verified",
+   "statusLabel": "Расчёт в разработке",
+   "notes": [
+    "Комбинированная схема отопления и кондиционирования.",
+    "Техническая совместимость проверяется позже."
+   ]
+  },
+  {
+   "id": "gas_boiler_vrf",
+   "label": "Газовый котёл + VRF",
+   "service": "heating_and_cooling",
+   "kind": "solution_template",
+   "scope": "hybrid",
+   "capabilityStatus": "not_yet_verified",
+   "statusLabel": "Расчёт в разработке",
+   "notes": [
+    "Комбинированная схема отопления и VRF охлаждения.",
+    "Техническая совместимость проверяется позже."
+   ]
+  },
+  {
+   "id": "radiators_plus_ac",
+   "label": "Радиаторы + кондиционеры",
+   "service": "heating_and_cooling",
+   "kind": "solution_template",
+   "scope": "hybrid",
+   "capabilityStatus": "not_yet_verified",
+   "statusLabel": "Расчёт в разработке",
+   "notes": [
+    "Комбинированная схема отопления и охлаждения.",
+    "Нагрузки и количество аппаратов будут считаться в следующих фазах."
+   ]
+  },
+  {
+   "id": "hydronic_floor_heating_plus_ac",
+   "label": "Водяной тёплый пол + кондиционеры",
+   "service": "heating_and_cooling",
+   "kind": "solution_template",
+   "scope": "hybrid",
+   "capabilityStatus": "not_yet_verified",
+   "statusLabel": "Расчёт в разработке",
+   "notes": [
+    "Комбинированная схема с тёплым полом и охлаждением.",
+    "Совместимость и нагрузка считаются позже."
+   ]
+  },
+  {
+   "id": "hydronic_floor_heating_plus_fan_coils",
+   "label": "Тёплый пол + фанкойлы",
+   "service": "heating_and_cooling",
+   "kind": "solution_template",
+   "scope": "hybrid",
+   "capabilityStatus": "not_yet_verified",
+   "statusLabel": "Расчёт в разработке",
+   "notes": [
+    "Комбинированная водяная схема отопления/охлаждения.",
+    "Расчёт и совместимость в следующей фазе."
+   ]
+  },
+  {
+   "id": "electric_heating_plus_cooling",
+   "label": "Электрическое отопление + кондиционирование",
+   "service": "heating_and_cooling",
+   "kind": "solution_template",
+   "scope": "hybrid",
+   "capabilityStatus": "not_yet_verified",
+   "statusLabel": "Расчёт в разработке",
+   "notes": [
+    "Комбинированная схема с электрическим отоплением.",
+    "Нагрузка и оборудование считаются позже."
+   ]
+  },
+  {
+   "id": "individual_combined_scheme",
+   "label": "Индивидуальная комбинированная схема",
+   "service": "heating_and_cooling",
+   "kind": "solution_template",
+   "scope": "hybrid",
+   "capabilityStatus": "not_yet_verified",
+   "statusLabel": "Расчёт в разработке",
+   "notes": [
+    "Свободная схема, которую позже уточнит инженер.",
+    "Здесь фиксируется только намерение пользователя."
+   ]
+  }
+ ]
+}

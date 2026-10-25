@@ -1,0 +1,9 @@
+{"source_type":"AUTHORIZED_DISTRIBUTOR","verification_tier":"VERIFIED_SECONDARY","description":"Authorized distributor document; professional use only if a verbatim re-host of the official manufacturer document"}
+{"source_type":"EXISTING_STRUCTURED_ATTRIBUTE","verification_tier":"UNVERIFIED","description":"Structured attribute already in DB"}
+{"source_type":"LEGACY_IMPORT","verification_tier":"UNVERIFIED","description":"Imported legacy value (not independently verified)"}
+{"source_type":"MANUAL_VERIFICATION","verification_tier":"VERIFIED_SECONDARY","description":"Manually verified by a qualified engineer; professional use only with audited_at + document reference"}
+{"source_type":"MANUFACTURER_DATASHEET","verification_tier":"AUTHORITATIVE","description":"Official manufacturer datasheet"}
+{"source_type":"MANUFACTURER_MANUAL","verification_tier":"AUTHORITATIVE","description":"Official installation/owner manual"}
+{"source_type":"MANUFACTURER_WEBSITE","verification_tier":"AUTHORITATIVE","description":"Official manufacturer website"}
+{"source_type":"PRODUCT_DESCRIPTION","verification_tier":"UNVERIFIED","description":"Free-text product description/card"}
+{"source_type":"UNKNOWN","verification_tier":"UNVERIFIED","description":"Unknown provenance"}

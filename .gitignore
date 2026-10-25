@@ -1,0 +1,63 @@
+# Source-only publication candidate: root files are allowlisted below.
+# Keep generated distributions, runtime data, and local environment files out.
+
+/*
+!/.gitignore
+!/AGENTS.md
+!/README.md
+!/package.json
+!/package-lock.json
+!/eslint.config.mjs
+!/client/
+!/server/
+!/scripts/
+!/tests/
+!/catalog/
+
+# Dependencies
+node_modules/
+
+# Environment and credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa*
+id_ed25519*
+
+# SQLite databases and sidecars
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite-*
+
+# Runtime uploads / imports inside allowed dirs
+/server/storage/
+/client/dist/
+/server/dist/
+/server/scripts/bp-smoke-manifests/*.json
+
+# Logs, temp, scratch, editor/build caches
+*.log
+*.tmp
+*.pid
+tmp/
+scratch/
+coverage/
+*.tsbuildinfo
+.DS_Store
+
+# Backups (incl. old client builds kept next to client/dist)
+/client/.dist-*/
+*.bak
+*.bak-*
+*.orig
+
+# Stray empty file from a past shell redirect
+/client/500

@@ -1,0 +1,885 @@
+{
+  "meta": {
+    "schemaVersion": "3.2.0",
+    "lastUpdated": "2026-08-14",
+    "name": "OhmX Electric Floor Heating Engineering Config",
+    "locale": "ru-AM",
+    "currency": "AMD",
+    "purpose": "Предварительный инженерный расчёт и подбор электрического тёплого пола по реальным товарам OhmX.am.",
+    "scope": [
+      "нагревательные кабели фиксированной длины",
+      "нагревательные маты фиксированной площади",
+      "терморегуляторы с датчиком пола",
+      "защитная автоматика",
+      "монтажные и обязательные аксессуары"
+    ],
+    "disclaimer": "Конфигурация предназначена для предварительного подбора. Окончательные теплотехнические и электрические решения, схема укладки, номиналы защиты и подключение должны быть подтверждены проектировщиком или квалифицированным электриком с учётом местных норм и паспортов выбранных изделий.",
+    "sourcePolicy": {
+      "manufacturerPassportOverridesConfig": true,
+      "localElectricalCodeOverridesConfig": true,
+      "doNotClaimRegulatoryComplianceFromConfigAlone": true
+    }
+  },
+  "electricalSystem": {
+    "nominalVoltageV": 230,
+    "frequencyHz": 50,
+    "phasesSupported": [
+      "single_phase"
+    ],
+    "currentCalculation": {
+      "formula": "actualTotalPowerW / nominalVoltageV",
+      "displayDecimals": 2,
+      "roundBeforeProtectionSelection": false
+    }
+  },
+  "guidedFlow": {
+    "intent": "floor_heating_selection",
+    "steps": [
+      {
+        "field": "roomType",
+        "questionType": "single_choice",
+        "required": true
+      },
+      {
+        "field": "roomAreaM2",
+        "questionType": "number_input",
+        "required": true,
+        "min": 1,
+        "max": 1000
+      },
+      {
+        "field": "installationAreaM2",
+        "questionType": "number_input",
+        "required": true,
+        "min": 0.5,
+        "maxField": "roomAreaM2",
+        "allowUseRoomArea": true
+      },
+      {
+        "field": "substrateType",
+        "questionType": "single_choice",
+        "required": true
+      },
+      {
+        "field": "floorCovering",
+        "questionType": "single_choice",
+        "required": true
+      },
+      {
+        "field": "heatingPurpose",
+        "questionType": "single_choice",
+        "required": true
+      },
+      {
+        "field": "insulationLevel",
+        "questionType": "single_choice",
+        "required": true
+      },
+      {
+        "field": "budgetLevel",
+        "questionType": "single_choice",
+        "required": false,
+        "default": "premium"
+      },
+      {
+        "field": "includeAccessories",
+        "questionType": "single_choice",
+        "required": true,
+        "default": true
+      },
+      {
+        "field": "confirmation",
+        "questionType": "confirmation",
+        "required": true
+      }
+    ],
+    "freeTextFastPath": {
+      "enabled": true,
+      "skipAlreadyExtractedSteps": true,
+      "minimumConfidence": 0.75
+    }
+  },
+  "designRules": {
+    "installationArea": {
+      "mustExclude": [
+        "стационарная мебель без вентиляционного зазора",
+        "ванна и душевой поддон",
+        "кухонный гарнитур",
+        "встроенная техника",
+        "перегородки",
+        "тяжёлые предметы без вентиляционного зазора"
+      ],
+      "minimumFreeAirGapUnderFurnitureMm": 60,
+      "requireExplicitInstallationArea": true
+    },
+    "heatingPurpose": {
+      "comfort_floor": {
+        "requiresHeatLossCalculation": false,
+        "description": "Комфортная температура поверхности пола; не считается единственным источником отопления."
+      },
+      "additional_heating": {
+        "requiresHeatLossCalculation": false,
+        "description": "Дополнение к существующей системе отопления."
+      },
+      "main_heating": {
+        "requiresHeatLossCalculation": true,
+        "designMarginRange": [
+          1.15,
+          1.25
+        ],
+        "blockFinalMainHeatingClaimWithoutHeatLoss": true,
+        "description": "Мощность определяется по расчётным теплопотерям помещения, а не только по площади."
+      }
+    },
+    "installedPowerSelection": {
+      "formula": "min(roomPresetTargetWm2, floorCovering.maxInstalledPowerWm2, selectedProduct.maxAllowedPowerWm2)",
+      "rejectIfRequiredInstalledPowerExceedsCoveringLimit": true,
+      "rejectIfMainHeatingPowerCannotCoverHeatLoss": true
+    }
+  },
+  "roomPowerProfilesWm2": {
+    "bathroom": {
+      "comfort_floor": {
+        "range": [
+          130,
+          160
+        ],
+        "default": 150
+      },
+      "additional_heating": {
+        "range": [
+          150,
+          180
+        ],
+        "default": 170
+      },
+      "main_heating": {
+        "fallbackRange": [
+          170,
+          200
+        ],
+        "default": 190,
+        "requiresHeatLossCalculation": true
+      },
+      "wetArea": true
+    },
+    "kitchen": {
+      "comfort_floor": {
+        "range": [
+          120,
+          150
+        ],
+        "default": 140
+      },
+      "additional_heating": {
+        "range": [
+          140,
+          170
+        ],
+        "default": 160
+      },
+      "main_heating": {
+        "fallbackRange": [
+          160,
+          190
+        ],
+        "default": 180,
+        "requiresHeatLossCalculation": true
+      },
+      "wetArea": false
+    },
+    "living_room": {
+      "comfort_floor": {
+        "range": [
+          110,
+          140
+        ],
+        "default": 130
+      },
+      "additional_heating": {
+        "range": [
+          130,
+          160
+        ],
+        "default": 150
+      },
+      "main_heating": {
+        "fallbackRange": [
+          150,
+          180
+        ],
+        "default": 170,
+        "requiresHeatLossCalculation": true
+      },
+      "wetArea": false
+    },
+    "bedroom": {
+      "comfort_floor": {
+        "range": [
+          100,
+          130
+        ],
+        "default": 120
+      },
+      "additional_heating": {
+        "range": [
+          120,
+          150
+        ],
+        "default": 140
+      },
+      "main_heating": {
+        "fallbackRange": [
+          140,
+          170
+        ],
+        "default": 160,
+        "requiresHeatLossCalculation": true
+      },
+      "wetArea": false
+    },
+    "balcony": {
+      "comfort_floor": {
+        "range": [
+          150,
+          180
+        ],
+        "default": 170
+      },
+      "additional_heating": {
+        "range": [
+          170,
+          200
+        ],
+        "default": 190
+      },
+      "main_heating": {
+        "fallbackRange": [
+          180,
+          220
+        ],
+        "default": 200,
+        "requiresHeatLossCalculation": true
+      },
+      "wetArea": false,
+      "highHeatLossRisk": true,
+      "insulationStronglyRecommended": true
+    },
+    "corridor": {
+      "comfort_floor": {
+        "range": [
+          110,
+          140
+        ],
+        "default": 130
+      },
+      "additional_heating": {
+        "range": [
+          130,
+          160
+        ],
+        "default": 150
+      },
+      "main_heating": {
+        "fallbackRange": [
+          150,
+          180
+        ],
+        "default": 170,
+        "requiresHeatLossCalculation": true
+      },
+      "wetArea": false
+    },
+    "other": {
+      "comfort_floor": {
+        "range": [
+          110,
+          150
+        ],
+        "default": 140
+      },
+      "additional_heating": {
+        "range": [
+          130,
+          170
+        ],
+        "default": 160
+      },
+      "main_heating": {
+        "fallbackRange": [
+          150,
+          190
+        ],
+        "default": 180,
+        "requiresHeatLossCalculation": true
+      },
+      "wetArea": false
+    }
+  },
+  "floorCoverings": {
+    "tile": {
+      "standardWetCableAllowed": true,
+      "standardWetMatAllowed": true,
+      "specialDrySystemRequired": false,
+      "maxInstalledPowerWm2": 220,
+      "defaultFloorTemperatureLimitC": 29,
+      "mainHeatingEligible": true,
+      "requiresManufacturerApproval": false,
+      "requireExplicitProductApproval": false
+    },
+    "porcelain": {
+      "standardWetCableAllowed": true,
+      "standardWetMatAllowed": true,
+      "specialDrySystemRequired": false,
+      "maxInstalledPowerWm2": 220,
+      "defaultFloorTemperatureLimitC": 29,
+      "mainHeatingEligible": true,
+      "requiresManufacturerApproval": false,
+      "requireExplicitProductApproval": false
+    },
+    "stone": {
+      "standardWetCableAllowed": true,
+      "standardWetMatAllowed": true,
+      "specialDrySystemRequired": false,
+      "maxInstalledPowerWm2": 220,
+      "defaultFloorTemperatureLimitC": 29,
+      "mainHeatingEligible": true,
+      "requiresManufacturerApproval": false,
+      "requireExplicitProductApproval": false
+    },
+    "laminate": {
+      "standardWetCableAllowed": true,
+      "standardWetMatAllowed": false,
+      "specialDrySystemAllowed": true,
+      "maxInstalledPowerWm2": 150,
+      "defaultFloorTemperatureLimitC": 27,
+      "mainHeatingEligible": false,
+      "requiresManufacturerApproval": true,
+      "requiresFloorSensorAndLimit": true,
+      "requireExplicitProductApproval": true
+    },
+    "vinyl": {
+      "standardWetCableAllowed": true,
+      "standardWetMatAllowed": false,
+      "specialDrySystemAllowed": true,
+      "maxInstalledPowerWm2": 140,
+      "defaultFloorTemperatureLimitC": 26,
+      "mainHeatingEligible": false,
+      "requiresManufacturerApproval": true,
+      "requiresFloorSensorAndLimit": true,
+      "requireExplicitProductApproval": true
+    },
+    "engineered_wood": {
+      "standardWetCableAllowed": true,
+      "standardWetMatAllowed": false,
+      "specialDrySystemAllowed": true,
+      "maxInstalledPowerWm2": 140,
+      "defaultFloorTemperatureLimitC": 27,
+      "mainHeatingEligible": false,
+      "requiresManufacturerApproval": true,
+      "requiresFloorSensorAndLimit": true,
+      "requireExplicitProductApproval": true
+    },
+    "other": {
+      "standardWetCableAllowed": false,
+      "standardWetMatAllowed": false,
+      "specialDrySystemAllowed": false,
+      "maxInstalledPowerWm2": 150,
+      "defaultFloorTemperatureLimitC": 27,
+      "mainHeatingEligible": false,
+      "requiresManufacturerApproval": true,
+      "blockUntilCompatibilityConfirmed": true,
+      "requireExplicitProductApproval": true
+    }
+  },
+  "substrates": {
+    "concrete_screed": {
+      "standardCableAllowed": true,
+      "standardMatAllowed": true,
+      "preferredSystem": "cable",
+      "minimumEmbedmentMm": 30,
+      "requiresProductSpecificEmbedmentCheck": true
+    },
+    "tile_adhesive": {
+      "standardCableAllowed": false,
+      "thinCableAllowedIfProductApproved": true,
+      "standardMatAllowed": true,
+      "preferredSystem": "mat",
+      "minimumEmbedmentMm": 5,
+      "requiresProductSpecificEmbedmentCheck": true
+    },
+    "old_tile": {
+      "standardCableAllowed": false,
+      "thinCableAllowedIfProductApproved": true,
+      "standardMatAllowed": true,
+      "preferredSystem": "mat",
+      "requiresPrimerAndAdhesiveCompatibilityCheck": true
+    },
+    "wood": {
+      "standardCableAllowed": false,
+      "standardMatAllowed": false,
+      "specialDrySystemRequired": true,
+      "preferredSystem": "special_dry_system",
+      "blockStandardWetSelection": true
+    },
+    "insulation_board": {
+      "standardCableAllowed": true,
+      "standardMatAllowed": true,
+      "preferredSystem": "product_dependent",
+      "requiresCompressiveStrengthCheck": true,
+      "requiresSystemApproval": true
+    },
+    "other": {
+      "standardCableAllowed": false,
+      "standardMatAllowed": false,
+      "preferredSystem": null,
+      "blockUntilSubstrateConfirmed": true
+    }
+  },
+  "cableDesign": {
+    "supportedLinearPowerWm": [
+      6,
+      10,
+      12,
+      15,
+      18,
+      20
+    ],
+    "indoorMaxLinearPowerWm": 20,
+    "selectionStrategy": "select_real_fixed_length_product_then_recalculate",
+    "theoreticalCableLengthFormula": "requiredTotalPowerW / selectedLinearPowerWm",
+    "spacingFormulaCm": "installationAreaM2 * 100 / selectedProductCableLengthM",
+    "actualInstalledPowerFormulaWm2": "selectedProductTotalPowerW / installationAreaM2",
+    "designSpacingCm": {
+      "minimum": 7.5,
+      "maximum": 15,
+      "preferredMax": 12.5,
+      "hardMinimum": 5,
+      "preferredMountingTapeSteps": [
+        7.5,
+        10,
+        12.5,
+        15,
+        17.5,
+        20
+      ],
+      "exactArrayMembershipRequired": false,
+      "snapToNearestTapeStepIfWithinCm": 1.0
+    },
+    "factoryLengthRules": {
+      "heatingCableMayBeShortened": false,
+      "heatingCableMayBeExtended": false,
+      "coldLeadMayBeExtendedOnlyPerManufacturerInstructions": true
+    },
+    "powerFit": {
+      "comfortTolerancePercent": {
+        "under": 10,
+        "over": 10
+      },
+      "mainHeatingMustMeetRequiredTotalPower": true,
+      "alwaysRecheckCoveringPowerLimit": true
+    }
+  },
+  "matDesign": {
+    "selectionStrategy": "largest_combination_not_exceeding_installation_area",
+    "allowMultipleMats": true,
+    "heatingCableMayBeCut": false,
+    "meshMayBeCutForTurning": true,
+    "typicalPowerRangeWm2": [
+      70,
+      200
+    ],
+    "typicalWidthM": 0.5,
+    "fixedFactorySizesRequired": true,
+    "selectedTotalMatAreaMustNotExceedInstallationArea": true,
+    "recalculateActualCoveragePercent": true
+  },
+  "mountingTape": {
+    "requiredForLooseCable": true,
+    "notRequiredForSelfAdhesiveMat": true,
+    "rowSpacingM": 0.5,
+    "wasteFactor": 1.1,
+    "minimumLengthM": 2,
+    "estimateFormulaM": "max(minimumLengthM, installationAreaM2 / rowSpacingM * wasteFactor)",
+    "roundUpToM": 1,
+    "modelFields": [
+      "requiredLengthMeters",
+      "packageLengthMeters",
+      "packageCount"
+    ]
+  },
+  "electricalProtection": {
+    "protectiveEarthRequired": true,
+    "screenBondingRequired": true,
+    "rcd": {
+      "required": true,
+      "maximumTripCurrentMa": 30,
+      "finalSelectionByQualifiedElectrician": true
+    },
+    "overcurrentProtection": {
+      "required": true,
+      "selectionBasis": [
+        "actual design current",
+        "cable cross-section",
+        "installation method",
+        "manufacturer instructions",
+        "local electrical code"
+      ],
+      "doNotAutoSelectFromCurrentAlone": true,
+      "orientationFactor": 1.25,
+      "standardRatingsA": [
+        6,
+        10,
+        13,
+        16,
+        20,
+        25,
+        32,
+        40,
+        50,
+        63
+      ],
+      "orientationOnly": true
+    },
+    "allPoleDisconnectionRequired": true,
+    "thermostatRelay": {
+      "defaultMaxResistiveLoadA": 16,
+      "readActualLimitFromSelectedProduct": true,
+      "recommendedContactorUtilizationThreshold": 0.8,
+      "contactorRequiredIfCurrentExceedsRelayRating": true,
+      "preferZoneSplitWhenPractical": true
+    }
+  },
+  "accessoryRules": {
+    "thermostat": {
+      "required": true,
+      "requiredCapabilities": [
+        "floor_sensor_input",
+        "floor_temperature_limit"
+      ],
+      "preferredCapabilities": [
+        "programmable",
+        "pwm_control",
+        "open_window_detection"
+      ],
+      "productMetadataFilters": {
+        "is_calculator_accessory": true,
+        "accessory_group": "thermostat",
+        "compatible_system_types": [
+          "floor_heating"
+        ]
+      },
+      "fallbackSearchTerms": [
+        "терморегулятор для тёплого пола",
+        "термостат с датчиком пола",
+        "DEVIreg",
+        "OJ Electronics"
+      ],
+      "rejectGenericRoomThermostatWithoutFloorSensorInput": true
+    },
+    "floorSensor": {
+      "requiredCapability": true,
+      "separateProductRequiredIfNotIncludedWithThermostat": true,
+      "avoidDuplicateIfIncluded": true,
+      "accessoryGroup": "floor_sensor"
+    },
+    "sensorConduit": {
+      "required": true,
+      "accessoryGroup": "corrugated_tube",
+      "allowManualLineItemIfNoCatalogProduct": true,
+      "placement": {
+        "betweenHeatingRuns": true,
+        "distanceFromWallRangeCm": [
+          50,
+          100
+        ],
+        "sealedEndRequired": true,
+        "replaceableSensorPathRequired": true
+      }
+    },
+    "protection": {
+      "required": true,
+      "accessoryGroups": [
+        "rcd",
+        "rcbo",
+        "circuit_breaker"
+      ],
+      "finalRatingRequiresElectrician": true
+    },
+    "mountingTape": {
+      "requiredForSystemTypes": [
+        "loose_cable"
+      ],
+      "notRequiredForSystemTypes": [
+        "self_adhesive_mat"
+      ],
+      "accessoryGroup": "mounting_tape"
+    },
+    "thermalInsulation": {
+      "conditional": true,
+      "recommendedFor": [
+        "main_heating",
+        "balcony",
+        "high_downward_heat_loss"
+      ],
+      "mustBeCompatibleWithFloorBuildUp": true,
+      "mustMeetCompressiveStrengthRequirement": true,
+      "doNotRecommendGenericFoilFoamAsUniversalSolution": true
+    },
+    "powerContactor": {
+      "conditional": true,
+      "accessoryGroup": "contactor",
+      "condition": "actualCurrentA > selectedThermostat.maxResistiveLoadA OR actualCurrentA > selectedThermostat.maxResistiveLoadA * recommendedContactorUtilizationThreshold",
+      "preferZoneSplitAlternative": true
+    },
+    "mountingBox": {
+      "required": true,
+      "accessoryGroup": "mounting_box",
+      "preferred": [
+        "1-gang flush box",
+        "Batibox 1 post 40-50mm"
+      ],
+      "note": "Для встраиваемого терморегулятора обязателен подрозетник/монтажная коробка."
+    },
+    "junctionBox": {
+      "required": false,
+      "accessoryGroup": "junction_box",
+      "note": "По месту — для соединений холодного конца и вывода датчика."
+    },
+    "circuitBreaker": {
+      "required": true,
+      "accessoryGroup": "circuit_breaker",
+      "selectionBasis": [
+        "actual design current",
+        "cable cross-section",
+        "installation method",
+        "local electrical code"
+      ],
+      "finalSelectionByQualifiedElectrician": true
+    },
+    "rcd": {
+      "required": true,
+      "accessoryGroup": "rcd",
+      "maximumTripCurrentMa": 30,
+      "finalSelectionByQualifiedElectrician": true
+    }
+  },
+  "productDataContract": {
+    "requiredForHeatingCable": [
+      "system_type",
+      "total_power_w",
+      "cable_length_m",
+      "linear_power_wm",
+      "suitable_substrates",
+      "suitable_coverings",
+      "availability_status",
+      "price"
+    ],
+    "requiredForHeatingMat": [
+      "system_type",
+      "total_power_w",
+      "mat_area_m2",
+      "power_wm2",
+      "mat_width_m",
+      "suitable_substrates",
+      "suitable_coverings",
+      "availability_status",
+      "price"
+    ],
+    "requiredForThermostat": [
+      "floor_sensor_input",
+      "floor_temperature_limit",
+      "max_resistive_load_a",
+      "sensor_included",
+      "availability_status",
+      "price"
+    ],
+    "publicForbiddenFields": [
+      "stock_quantity",
+      "available_quantity",
+      "quantity",
+      "reserved_quantity",
+      "internal_cost",
+      "supplier_cost",
+      "purchase_price",
+      "admin_notes"
+    ]
+  },
+  "selectionPolicy": {
+    "mainProductOrder": [
+      "compatibility_hard_pass",
+      "installation_method_match",
+      "covering_match",
+      "required_power_fit",
+      "premium_brand",
+      "in_stock",
+      "low_stock",
+      "preorder",
+      "calculator_priority",
+      "standard_brand_replacement",
+      "economy_brand_replacement",
+      "price_fit"
+    ],
+    "availabilityOrder": [
+      "in_stock",
+      "low_stock",
+      "preorder"
+    ],
+    "excludeUnavailable": true,
+    "preorderLabel": "Под заказ",
+    "preorderNote": "Поставка под заказ, срок уточняется",
+    "accessoriesEnabledByDefault": true,
+    "accessoriesRemovableInOneClick": true,
+    "doNotSelectByNameOnlyWhenMetadataExists": true,
+    "fallbackTextSearchAllowed": true,
+    "fallbackResultMustBeMarkedForReview": true
+  },
+  "validationRules": {
+    "roomAreaM2": {
+      "min": 1,
+      "max": 1000
+    },
+    "installationAreaM2": {
+      "min": 0.5,
+      "mustNotExceedField": "roomAreaM2",
+      "error": "Площадь укладки не может быть больше площади помещения.",
+      "suspiciousRatioWarningAbove": 0.9,
+      "requireExplicitValue": true
+    },
+    "targetPowerWm2": {
+      "mustNotExceedCoveringLimit": true,
+      "mustNotExceedProductLimit": true
+    },
+    "cableSpacingCm": {
+      "warnBelow": 7.5,
+      "hardRejectBelow": 5,
+      "warnAbove": 20
+    },
+    "mainHeating": {
+      "requiresHeatLossW": true,
+      "blockProfessionalClaimWithoutHeatLoss": true
+    },
+    "mixedFloorCoverings": {
+      "separateZonesRecommended": true,
+      "separateThermostatOrIndependentLimitRequired": true
+    }
+  },
+  "calculationRules": {
+    "requiredTotalPowerW": {
+      "comfortOrAdditional": "installationAreaM2 * targetInstalledPowerWm2",
+      "mainHeating": "roomHeatLossW * selectedDesignMargin"
+    },
+    "requiredInstalledPowerWm2ForMainHeating": "requiredTotalPowerW / installationAreaM2",
+    "theoreticalCableLengthM": "requiredTotalPowerW / selectedLinearPowerWm",
+    "actualCableSpacingCm": "installationAreaM2 * 100 / selectedProductCableLengthM",
+    "actualInstalledPowerWm2": "selectedProductTotalPowerW / installationAreaM2",
+    "actualCurrentA": "selectedProductTotalPowerW / nominalVoltageV",
+    "mountingTapeLengthM": "ceil(max(minimumLengthM, installationAreaM2 / rowSpacingM * wasteFactor))",
+    "displayRounding": {
+      "powerW": 0,
+      "powerKw": 2,
+      "currentA": 2,
+      "cableLengthM": 1,
+      "spacingCm": 1,
+      "areaM2": 2
+    },
+    "engineeringRule": "Расчётная длина кабеля используется только для поиска ближайшего реального изделия фиксированной длины. Финальный шаг, мощность на м² и ток пересчитываются по фактическим данным выбранного товара."
+  },
+  "warnings": {
+    "NO_SHORTEN_HEATING_ELEMENT": "Нагревательный элемент фиксированной мощности нельзя укорачивать или наращивать. Для мата допускается разрезать только сетку, не нагревательный кабель.",
+    "NO_FIXED_FURNITURE": "Не укладывайте нагревательный элемент под стационарную мебель, ванну, кухонный гарнитур и технику без требуемого вентиляционного зазора.",
+    "NO_CROSSING": "Нагревательные линии не должны пересекаться, касаться друг друга или укладываться внахлёст.",
+    "CABLE_SPACING_OUT_OF_RANGE": "Полученный шаг укладки не соответствует допустимому диапазону выбранного изделия. Выберите другую заводскую мощность или длину кабеля.",
+    "HEAT_LOSS_REQUIRED": "Для основного отопления обязателен отдельный расчёт теплопотерь. Подбор только по площади не подтверждает возможность полного отопления помещения.",
+    "RCD_REQUIRED": "Контур должен быть защищён УЗО/дифзащитой с параметрами по паспорту изделия и местным нормам; для рассматриваемой конфигурации максимальный ток утечки устройства принят 30 мА.",
+    "QUALIFIED_ELECTRICIAN_REQUIRED": "Подбор сечения линии, аппаратов защиты, контактора, подключение и измерения выполняет квалифицированный электрик.",
+    "COVERING_LIMIT": "Требуемая установленная мощность или температура превышает лимит покрытия. Используйте паспорт покрытия как приоритетный источник.",
+    "SPECIAL_DRY_SYSTEM_REQUIRED": "Для выбранного основания или покрытия требуется специальная система сухого монтажа; стандартный кабель или мат в клее/стяжке не подбирать.",
+    "SENSOR_REQUIRED": "Датчик пола должен быть подключён к совместимому терморегулятору и установлен в заменяемой гофрированной трубке между нагревательными линиями.",
+    "INSULATION_RECOMMENDED": "При основном отоплении, на балконе или при высоких потерях вниз нужна совместимая теплоизоляция с достаточной прочностью на сжатие.",
+    "THERMOSTAT_RELAY_LIMIT": "Расчётный ток близок к пределу или превышает релейную нагрузку выбранного терморегулятора. Разделите систему на зоны либо примените контактор по проекту.",
+    "PRODUCT_PASSPORT_OVERRIDE": "Если конфигурация расходится с паспортом товара, требования производителя имеют приоритет.",
+    "MANUAL_REVIEW_REQUIRED": "Товар выбран по резервному текстовому поиску из-за неполных метаданных и требует ручной проверки совместимости."
+  },
+  "resultContract": {
+    "calculation": [
+      "roomAreaM2",
+      "installationAreaM2",
+      "heatingPurpose",
+      "targetInstalledPowerWm2",
+      "requiredTotalPowerW",
+      "selectedProductTotalPowerW",
+      "actualInstalledPowerWm2",
+      "actualCurrentA",
+      "floorTemperatureLimitC"
+    ],
+    "cableResult": [
+      "selectedProductId",
+      "cableLengthM",
+      "linearPowerWm",
+      "spacingCm",
+      "mountingTapeLengthM"
+    ],
+    "matResult": [
+      "selectedProductIds",
+      "totalMatAreaM2",
+      "coveragePercent",
+      "powerWm2"
+    ],
+    "commercial": [
+      "mainProducts",
+      "requiredAccessories",
+      "optionalAccessories",
+      "availabilitySummary",
+      "estimatedTotalAMD",
+      "preorderLines"
+    ],
+    "safety": [
+      "warnings",
+      "requiresHeatLossCalculation",
+      "requiresElectricianConfirmation",
+      "requiresManualReview"
+    ]
+  },
+  "insulationFactors": {
+    "poor": 1.15,
+    "standard": 1.0,
+    "good": 0.92,
+    "excellent": 0.88,
+    "notes": "Множитель к удельной мощности помещения. poor=+15%, good=-8%, excellent=-12%."
+  },
+  "brandPolicy": {
+    "primaryTier": "premium",
+    "premiumBrands": [
+      "DEVI",
+      "Danfoss"
+    ],
+    "standardBrands": [
+      "Fenix",
+      "OJ Electronics"
+    ],
+    "economyBrands": [
+      "HIF"
+    ],
+    "rule": "Primary recommendation is premium brand kit. Cheaper brands are offered only as explicit replacements."
+  },
+  "regionProfiles": {
+    "AM": {
+      "nominalVoltageV": 230,
+      "currency": "AMD",
+      "localeDefaults": [
+        "hy",
+        "ru",
+        "en"
+      ],
+      "note": "Only region-dependent defaults. Product, covering and safety constraints remain separate."
+    }
+  },
+  "defaultRegionProfile": "AM",
+  "validation": {
+    "minimumRoomAreaM2": 0.5,
+    "minimumHeatedAreaM2": 0.2,
+    "suspiciousHeatedAreaRatio": 0.9,
+    "areaToleranceM2": 0.05
+  }
+}
