@@ -32,7 +32,7 @@ export function QuantitySelector({ value, onChange, size = 'md', max = MAX_QUANT
         value={value}
         onChange={(event) => onChange(clamp(Number(event.target.value)))}
         onFocus={(event) => event.target.select()}
-        className={`${inputClass} appearance-none border-0 bg-transparent p-0 text-center font-semibold text-fg-strong [-moz-appearance:textfield] focus:outline-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none`}
+        className={`${inputClass} appearance-none border-0 bg-transparent p-0 text-center font-semibold text-fg-strong [-moz-appearance:textfield] focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none`}
         aria-label={t('common.quantity.ariaLabel')}
       />
       <button

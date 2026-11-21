@@ -63,7 +63,7 @@ export function SearchBar({
 
   return (
     <div className="search-combobox">
-      <label className={`search-shell ${compact ? 'search-shell--compact' : ''}`}>
+      <div className={`search-shell ${compact ? 'search-shell--compact' : ''}`}>
         <Search className="h-5 w-5 text-slate-400 sm:h-6 sm:w-6" />
         <input
           className="search-shell__input"
@@ -81,10 +81,10 @@ export function SearchBar({
             {resolvedSubmitLabel}
           </button>
         ) : null}
-      </label>
+      </div>
 
       {suggestionsOpen && suggestions.length ? (
-        <div className="search-suggestions" role="listbox" aria-label={t('search.shared.suggestionsLabel')}>
+        <div className="search-suggestions" role="group" aria-label={t('search.shared.suggestionsLabel')}>
           {suggestions.map((suggestion) => (
             <button
               key={suggestion.id}
