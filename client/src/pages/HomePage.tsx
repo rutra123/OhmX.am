@@ -60,14 +60,28 @@ function HomeIntroPopup({ onClose, onSkip }: HomeIntroPopupProps) {
   }, []);
 
   return (
-    <div className="home-intro-modal" role="presentation" onClick={onClose}>
+    <div className="home-intro-modal" role="presentation" onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
       <div
         className="home-intro-modal__panel"
         role="dialog"
         aria-modal="true"
         aria-labelledby="home-intro-title"
         aria-describedby="home-intro-description"
-        onClick={(event) => event.stopPropagation()}
+        onKeyDown={(event) => {
+          if (event.key !== 'Tab') return;
+          const focusable = event.currentTarget.querySelectorAll<HTMLElement>(
+            'a[href], button:not(:disabled), input:not(:disabled), select:not(:disabled), textarea:not(:disabled), [tabindex]:not([tabindex="-1"])',
+          );
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last?.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first?.focus();
+          }
+        }}
       >
         <button ref={closeButtonRef} type="button" className="home-intro-modal__close" onClick={onClose} aria-label={t('home.intro.closeAria')}>
           ×

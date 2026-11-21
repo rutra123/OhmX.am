@@ -39,7 +39,7 @@ export const AdminLoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-950">
+    <div className="admin-login-page min-h-screen flex items-center justify-center bg-slate-950">
       <div className="w-full max-w-sm bg-slate-900 border border-slate-700 rounded-2xl p-8 space-y-6">
         <div>
           <h1 className="text-2xl font-semibold text-white">Admin Login</h1>
@@ -48,24 +48,26 @@ export const AdminLoginPage: React.FC = () => {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm text-slate-400 mb-1">Username</label>
+            <label htmlFor="admin-username" className="block text-sm text-slate-400 mb-1">Username</label>
             <input
+              id="admin-username"
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-blue-500"
+              className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
               autoComplete="username"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm text-slate-400 mb-1">Password</label>
+            <label htmlFor="admin-password" className="block text-sm text-slate-400 mb-1">Password</label>
             <input
+              id="admin-password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-blue-500"
+              className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
               autoComplete="current-password"
               required
             />

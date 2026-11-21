@@ -179,7 +179,7 @@ p {
   font-weight: var(--weight-action);
   line-height: 1;
   color: rgb(var(--fg-soft));
-  background: rgba(15, 24, 40, 0.78);
+  background: rgb(var(--card));
 }
 
 .chip:hover {
@@ -188,7 +188,7 @@ p {
 }
 
 .field {
-  @apply w-full rounded-2xl border border-line bg-card px-4 py-3 outline-none focus:border-primary;
+  @apply w-full rounded-2xl border border-line bg-card px-4 py-3 outline-none focus:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
   font-size: var(--type-body);
   line-height: var(--leading-compact);
   color: rgb(var(--fg));
@@ -207,8 +207,13 @@ p {
 }
 
 .btn-primary {
-  @apply btn bg-primary text-white hover:opacity-90;
+  @apply btn bg-primary hover:opacity-90;
+  color: rgb(var(--bg));
   box-shadow: 0 14px 30px rgba(255, 105, 72, 0.22);
+}
+
+:root[data-theme='light'] .btn-primary {
+  color: #fff;
 }
 
 .btn-secondary {
@@ -1854,7 +1859,7 @@ p {
 }
 
 .search-shell__input {
-  @apply w-full bg-transparent text-base outline-none sm:text-lg;
+  @apply w-full bg-transparent text-base outline-none sm:text-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
   color: rgb(var(--fg));
 }
 
@@ -2583,6 +2588,15 @@ p {
   color: rgb(var(--fg)) !important;
 }
 
+[data-theme='dark'] .bg-primary.text-white,
+:root:not([data-theme='light']) .bg-primary.text-white {
+  color: rgb(var(--bg)) !important;
+}
+
+[data-theme='light'] .bg-primary.text-white {
+  color: #fff !important;
+}
+
 [data-theme='light'] .text-white\/88 {
   color: rgb(var(--fg-soft)) !important;
 }
@@ -2609,6 +2623,18 @@ p {
 
 [data-theme='light'] .text-slate-900 {
   color: rgb(var(--fg-strong)) !important;
+}
+
+[data-theme='light'] .admin-login-page .text-white {
+  color: #fff !important;
+}
+
+[data-theme='light'] .admin-login-page .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+[data-theme='light'] .admin-login-page .text-slate-500 {
+  color: #94a3b8 !important;
 }
 
 [data-theme='light'] .bg-white {

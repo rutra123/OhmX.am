@@ -538,7 +538,7 @@ function QuestionCard({
       {question.type === 'number_input' && (
         <div className="mt-4 space-y-3">
           <div className="flex items-center gap-2 rounded-2xl border border-line bg-surface px-4 py-2">
-            <input type="number" inputMode="decimal" value={draft} onChange={(e) => { setDraft(e.target.value); setValidationError(''); }} onKeyDown={(e) => { if (e.key === 'Enter') submitNumber(); }} placeholder={question.placeholder} min={question.min} max={question.max} className="min-w-0 flex-1 bg-transparent py-2 text-lg font-semibold text-fg-strong outline-none" />
+            <input type="number" inputMode="decimal" value={draft} onChange={(e) => { setDraft(e.target.value); setValidationError(''); }} onKeyDown={(e) => { if (e.key === 'Enter') submitNumber(); }} placeholder={question.placeholder} min={question.min} max={question.max} className="min-w-0 flex-1 bg-transparent py-2 text-lg font-semibold text-fg-strong outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" />
             {question.unit ? <span className="shrink-0 text-sm text-fg-muted">{question.unit}</span> : null}
           </div>
           {validationError ? <div className="text-xs text-red-400">{validationError}</div> : null}
@@ -618,11 +618,11 @@ function QuestionCard({
               <label key={field.key} className="block">
                 <span className="text-xs font-medium text-fg-muted">{field.label}</span>
                 {field.inputType === 'select' ? (
-                  <select value={String(formValues[field.key] ?? '')} onChange={(e) => setFormValues((prev) => ({ ...prev, [field.key]: e.target.value === 'true' ? true : e.target.value === 'false' ? false : e.target.value }))} className="mt-1 w-full rounded-2xl border border-line bg-surface px-4 py-3 text-sm font-semibold text-fg-strong outline-none">
+                  <select value={String(formValues[field.key] ?? '')} onChange={(e) => setFormValues((prev) => ({ ...prev, [field.key]: e.target.value === 'true' ? true : e.target.value === 'false' ? false : e.target.value }))} className="mt-1 w-full rounded-2xl border border-line bg-surface px-4 py-3 text-sm font-semibold text-fg-strong outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
                     {field.options?.map((option) => <option key={String(option.value)} value={String(option.value)}>{option.label}</option>)}
                   </select>
                 ) : (
-                  <input type="number" inputMode="decimal" value={String(formValues[field.key] ?? '')} min={field.min} max={field.max} step={field.step} onChange={(e) => setFormValues((prev) => ({ ...prev, [field.key]: e.target.value === '' ? '' : Number(e.target.value) }))} className="mt-1 w-full rounded-2xl border border-line bg-surface px-4 py-3 text-base font-semibold text-fg-strong outline-none" />
+                  <input type="number" inputMode="decimal" value={String(formValues[field.key] ?? '')} min={field.min} max={field.max} step={field.step} onChange={(e) => setFormValues((prev) => ({ ...prev, [field.key]: e.target.value === '' ? '' : Number(e.target.value) }))} className="mt-1 w-full rounded-2xl border border-line bg-surface px-4 py-3 text-base font-semibold text-fg-strong outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" />
                 )}
               </label>
             ))}
@@ -700,7 +700,7 @@ function RequirementsFormCard({
           <select
             value={String(values[field.name] ?? '')}
             onChange={(e) => updateValue(field.name, e.target.value)}
-            className="mt-1 w-full rounded-2xl border border-line bg-surface px-4 py-3 text-sm font-semibold text-fg-strong outline-none"
+            className="mt-1 w-full rounded-2xl border border-line bg-surface px-4 py-3 text-sm font-semibold text-fg-strong outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             {field.options?.map((option) => (
               <option key={String(option.value)} value={String(option.value)}>{option.label}</option>
@@ -736,7 +736,7 @@ function RequirementsFormCard({
           min={field.min}
           max={field.max}
           step={field.step}
-          className="mt-1 w-full rounded-2xl border border-line bg-surface px-4 py-3 text-base font-semibold text-fg-strong outline-none"
+          className="mt-1 w-full rounded-2xl border border-line bg-surface px-4 py-3 text-base font-semibold text-fg-strong outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         />
       </label>
     );
@@ -1204,7 +1204,7 @@ export function AiEngineeringSelectorPage() {
                   if (e.key === 'Enter') submit();
                 }}
                 placeholder={t('aiTools.chat.placeholder')}
-                className="flex-1 rounded-full border border-line bg-card px-4 py-2 text-sm text-fg-strong outline-none"
+                className="flex-1 rounded-full border border-line bg-card px-4 py-2 text-sm text-fg-strong outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               />
               <button
                 onClick={submit}

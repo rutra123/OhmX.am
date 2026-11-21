@@ -80,7 +80,27 @@ export function ProductChoicePicker({ choice, title, catalog, formatAmd, selecte
 
   useEffect(() => {
     if (!open) return undefined;
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setOpen(false);
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const dialog = closeRef.current?.closest<HTMLElement>('[role="dialog"]');
+      const focusable = dialog?.querySelectorAll<HTMLElement>(
+        'a[href], button:not(:disabled), input:not(:disabled), select:not(:disabled), textarea:not(:disabled), [tabindex]:not([tabindex="-1"])',
+      );
+      const first = focusable?.[0];
+      const last = focusable?.[focusable.length - 1];
+      if (!first || !last) return;
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
     document.addEventListener('keydown', onKey);
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
@@ -124,8 +144,8 @@ export function ProductChoicePicker({ choice, title, catalog, formatAmd, selecte
       {open && createPortal(
         // .bp-wrap is a layout container (position:fixed inside it would be relative to it) and owns the design tokens:
         // the dialog is rendered under <body> in its own token scope.
-        <div className="bp-wrap bp-pick-backdrop" role="presentation" onClick={close}>
-          <div className="bp-pick-dialog" role="dialog" aria-modal="true" aria-label={title} onClick={(e) => e.stopPropagation()}>
+        <div className="bp-wrap bp-pick-backdrop" role="presentation" onClick={(event) => { if (event.target === event.currentTarget) close(); }}>
+          <div className="bp-pick-dialog" role="dialog" aria-modal="true" aria-label={title}>
             <div className="bp-pick-head">
               <div>
                 <strong>{title}</strong>
